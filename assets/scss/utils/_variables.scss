@@ -352,7 +352,6 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
 
-  "white": $white,
   "green-50": $green-50,
   "green-100": $green-100,
   "green-200": $green-200,
@@ -457,7 +456,7 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+$enable-rfs:                  false !default;//true !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     true !default;//false !default;
 $enable-deprecation-messages: true !default;
@@ -701,7 +700,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -746,26 +745,16 @@ $font-sizes: (
   // 6: $h6-font-size
   display-md: 40px,
   display-lg: 48px,
-  h1-md: 34px,
-  h1-lg: 41px,
-  h2-md: 28px,
-  h2-lg: 34px,
-  h3-md: 22px,
-  h3-lg: 28px,
-  h4-md: 20px,
-  h4-lg: 25px,
-  title-1-md: 17px,
-  title-1-lg: 22px,
-  title-2-md: 15px,
-  title-2-lg: 20px,
-  body-1-md: 17px,
-  body-1-lg: 22px,
-  body-2-md: 15px,
-  body-2-lg: 20px,
-  caption-1-md: 13px,
-  caption-1-lg: 18px,
-  caption-2-md: 12px,
-  caption-2-lg: 16px,
+  h1: 34px,
+  h2: 28px,
+  h3: 22px,
+  h4: 20px,
+  title-md: 15px,
+  title-lg: 17px,
+  body-md: 15px,
+  body-lg: 17px,
+  caption-md: 12px,
+  caption-lg: 13px,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -773,9 +762,9 @@ $font-sizes: (
 $headings-margin-bottom:      0rem !default;//$spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        700 !default;//500 !default;
+$headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              $black-950 !default;// inherit !default;
+$headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
