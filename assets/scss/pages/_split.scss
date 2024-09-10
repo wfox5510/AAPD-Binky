@@ -1,19 +1,41 @@
-.avatar-list{
+.avatar-list {
   display: flex;
-  li{
+
+  li {
     position: relative;
     margin-right: -4px;
   }
-  li:nth-child(1){
-    z-index:4;
+
+  li:nth-child(1) {
+    z-index: 4;
   }
-  li:nth-child(2){
-    z-index:3;
+
+  li:nth-child(2) {
+    z-index: 3;
   }
-  li:nth-child(3){
-    z-index:2;
+
+  li:nth-child(3) {
+    z-index: 2;
   }
-  li:nth-child(4){
-    z-index:1;
+
+  li:nth-child(4) {
+    z-index: 1;
   }
+}
+
+.check-input-black-950 {
+  background-color: $white;
+  &:checked {
+    background-color: $black-950;
+    border-color: $black-950;
+  }
+}
+
+.scaner-bar{
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  bottom: calc(0% + 32px)
 }
