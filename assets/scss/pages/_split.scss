@@ -25,17 +25,66 @@
 
 .check-input-black-950 {
   background-color: $white;
+
   &:checked {
     background-color: $black-950;
     border-color: $black-950;
   }
 }
 
-.scaner-bar{
+.scaner-bar {
   height: 64px;
-  display: flex;
   align-items: center;
   position: fixed;
   z-index: 1000;
-  bottom: calc(0% + 32px)
+  bottom: calc(0% + 31.5px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: $black-50;
+  li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fi{
+      font-size: 24px;
+    }
+  }
+  .nav-link{
+    color: $black-400;
+    &.active{
+      color: $white;
+    }
+  }
+  .scan-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    background-color: $purple-300;
+    border: 8px solid $black-950;
+    border-radius: $border-radius-pill;
+    transform: translateX(-50%);
+
+    .fi-br-plus {
+      font-size: 24px;
+      color: $black-950;
+    }
+  }
+}
+.payment-list{
+  padding-bottom: 96px;
+  height: calc(100vh - 295px);
+  overflow: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
