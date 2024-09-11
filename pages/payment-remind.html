@@ -10,18 +10,74 @@
 
 <body>
   <%- include('./layout/topbar'); -%>
-  <section class="mt-11">
-    <div class="head-payment-remind mb-6">
-      <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
-      <h2 class="fs-title-lg fw-bold">提醒款項</h2>
-      <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
-    </div>
-    <div class="container">
-      
-    </div>
-  </section>
-  <%- include('./layout/bottombar'); -%>
-  <script type="module" src="../main.js"></script>
+    <section class="mt-11 mb-6">
+      <div class="head-payment-remind mb-6">
+        <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+        <h2 class="fs-title-lg fw-bold">提醒款項</h2>
+        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+      </div>
+      <div class="container">
+        <ul class="nav navtab-bar navtab-black nav-pills mb-6 rounded-120 fs-caption-lg" id="remind-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80 active" id="payment-remind-tab" data-bs-toggle="pill"
+              data-bs-target="#payment-remind" type="button" role="tab" aria-controls="payment-remind"
+              aria-selected="true">需收款</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80" id="repayment-remind-tab" data-bs-toggle="pill"
+              data-bs-target="#repayment-remind" type="button" role="tab" aria-controls="repayment-remind"
+              aria-selected="false">需還款</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80" id="all-payment-history-tab" data-bs-toggle="pill"
+              data-bs-target="#all-payment-history" type="button" role="tab" aria-controls="all-payment-history"
+              aria-selected="false">歷史款項</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="remind-list overscroll-nobar">
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="payment-remind" role="tabpanel" aria-labelledby="payment-remind-tab">
+          <div class="container">
+            <ul class="list-unstyled m-0">
+              <li class="card rounded-0 border-0 border-bottom">
+                <div class="card-body p-4 rounded-160 d-flex align-items-center bg-white">
+                  <label for="payment-remind-1" class="d-flex align-items-center gap-3 me-3">
+                    <div class="py-2 px-3">
+                      <img src="../assets/img/avatar-2.png" alt="avatar" class="avatar d-block mb-1">
+                      <span class="d-block text-center fs-body-md text-black-950">Elly</span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                      <span class="fs-caption-md mb-1">須付款給</span>
+                      <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
+                    </div>
+                    <div class="py-2 px-3">
+                      <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                    </div>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0 p-3 remind-checkbox" type="checkbox" value="payment-remind-1"
+                    id="payment-remind-1">
+                </div>
+                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                  <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                </div>
+              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="repayment-remind" role="tabpanel" aria-labelledby="repayment-remind-tab">2</div>
+        <div class="tab-pane fade" id="all-payment-history" role="tabpanel" aria-labelledby="all-payment-history-tab">3
+        </div>
+      </div>
+    </section>
+    <%- include('./layout/bottombar'); -%>
+      <script type="module" src="../main.js"></script>
 </body>
 
 </html>
