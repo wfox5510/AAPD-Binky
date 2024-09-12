@@ -1,0 +1,33 @@
+.modal-dialog.modal-dialog-bottom {
+  height: calc(100vh - 32px);
+  display: flex;
+  align-items: flex-end;
+  .modal-content {
+    border-radius: 32px 32px 0px 0px;
+  }
+}
+
+.modal.show .modal-dialog.modal-dialog-bottom {
+  animation: modalAnimate-bottom-in 0.3s forwards;
+}
+
+.modal.fade .modal-dialog.modal-dialog-bottom {
+  transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-bottom {
+  transform: translateY(0);
+}
+
+.modal.fade:not(.show) .modal-dialog.modal-dialog-bottom {
+  transform: translateY(40%);
+}
+
+@keyframes modalAnimate-bottom-in {
+  from {
+    bottom: -40%;
+  }
+  to {
+    bottom:0%;
+  }
+}

@@ -56,3 +56,7 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
     font-weight: 600;
   }
 }
+
+.border-top-dashed{
+  border-top:1px dashed;
+}
