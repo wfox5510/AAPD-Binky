@@ -1,4 +1,4 @@
-.head-payment-remind{
+.head-payment-remind {
   height: 44px;
   display: flex;
   justify-content: space-between;
@@ -6,20 +6,35 @@
   padding: 6px 8px;
 }
 
-.remind-list{
+.remind-list {
   height: calc(100vh - 285px);
 }
 
-.details-link{
+.details-link {
   padding: 6px 8px;
   display: flex;
   align-items: center;
 }
-.remind-check{
+
+.remind-check {
   padding: 14px;
   border: 2px solid $white;
 }
-.remind-check:has(input:checked){
+
+.remind-check:has(input:checked) {
   border: 2px solid $black-700;
 }
 
+.offcanvas.offcanvas-detail {
+  width: 100%;
+  top: calc(0% + 44px);
+  height: calc(100vh - 76px);
+  border: 0px;
+  .offcanvas-body{
+    height: calc(100vh - 76px);
+  }
+}
+
+.bankid-copy{
+  padding: 6px;
+}

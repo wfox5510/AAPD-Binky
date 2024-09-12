@@ -30,7 +30,8 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
       ),
     ));
 
-.JPY-symbol{
+.JPY-symbol,.negative-symbol{
+  display: inline-block;
   margin-right: 2px;
 }
 .overscroll-nobar {
@@ -44,5 +45,14 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+.list-seperate{
+  li+li::before{
+    content: "|";
+    margin-right: 4px;
+    margin-left: 4px;
+    font-weight: 600;
   }
 }

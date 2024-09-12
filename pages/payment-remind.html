@@ -55,7 +55,7 @@
                 <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-1" id="payment-remind-1">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -332,6 +332,39 @@
       </div>
     </div>
   </section>
+
+  <div class="offcanvas offcanvas-end offcanvas-detail show" tabindex="-1" id="offcanvas-detail" data-bs-backdrop="false" aria-labelledby="offcanvas-detailLabel">
+    <div class="offcanvas-header head-payment-remind">
+      <a href="#" data-bs-dismiss="offcanvas" aria-label="Close" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+      <h2 class="fs-title-lg fw-bold">提醒款項</h2>
+      <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+    </div>
+    <div class="offcanvas-body overscroll-nobar text-center py-0">
+      <section class="pt-8 pb-6">
+        <h3 class="fs-h4 mb-6 fw-bold">Elly, 提醒你要付款給Mia囉!</h3>
+        <h4 class="fs-title-md fw-semibold mb-1">東京滑雪團</h4>
+        <span class="d-block fs-caption-md mb-6">2024/12/01 - 2024/12/06</span>
+        <div class="d-flex align-items-center px-4 py-3 mb-4 rounded-120 bg-purple-200">
+          <span class="fs-h4 fw-bold me-auto text-dark">合計</span>
+          <span class="fs-h3 fw-bold text-black-950">
+            <span class="negative-symbol">-</span><span class="JPY-symbol">¥</span>6,700
+          </span>
+        </div>
+        <div class="p-4 mb-6 rounded-120 bg-purple-100 text-start text-black-950">
+          <h5 class="fs-body-md fw-normal mb-2">我的帳戶</h5>
+          <ul class="list-unstyled list-seperate d-flex align-items-center mb-1 fs-caption-md lh-sm">
+            <li>台新銀行 (812)</li>
+            <li>敦南分行 (0023)</li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <span class="d-block fs-caption-md me-1">2777-14-2345678-0</span>
+            <a href="##" class="bankid-copy d-block text-black-950"><i class="fi fi-rr-duplicate d-block fs-caption-md"></i></a>
+          </div>
+        </div>
+        <span class="fs-body-lg text-black-950">請在<span class="fs-title-lg fw-semibold d-inline-block px-1">2024/12/20</span>之前匯款, 謝謝</span>
+      </section>
+    </div>
+  </div>
   <%- include('./layout/bottombar'); -%>
   <script type="module" src="../main.js"></script>
 </body>
