@@ -15,4 +15,11 @@
   display: flex;
   align-items: center;
 }
+.remind-check{
+  padding: 14px;
+  border: 2px solid $white;
+}
+.remind-check:has(input:checked){
+  border: 2px solid $black-700;
+}
 

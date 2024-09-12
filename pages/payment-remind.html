@@ -10,74 +10,330 @@
 
 <body>
   <%- include('./layout/topbar'); -%>
-    <section class="mt-11 mb-6">
-      <div class="head-payment-remind mb-6">
-        <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
-        <h2 class="fs-title-lg fw-bold">提醒款項</h2>
-        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+  <section class="mt-11 mb-6">
+    <div class="head-payment-remind mb-6">
+      <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+      <h2 class="fs-title-lg fw-bold">提醒款項</h2>
+      <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+    </div>
+    <div class="container">
+      <ul class="nav navtab-bar navtab-black nav-pills mb-6 rounded-120 fs-caption-lg" id="remind-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80 active" id="payment-remind-tab" data-bs-toggle="pill" data-bs-target="#payment-remind" type="button" role="tab" aria-controls="payment-remind" aria-selected="true">需收款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="repayment-remind-tab" data-bs-toggle="pill" data-bs-target="#repayment-remind" type="button" role="tab" aria-controls="repayment-remind" aria-selected="false">需還款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="all-payment-history-tab" data-bs-toggle="pill" data-bs-target="#all-payment-history" type="button" role="tab" aria-controls="all-payment-history" aria-selected="false">歷史款項</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="remind-list overscroll-nobar">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="payment-remind" role="tabpanel" aria-labelledby="payment-remind-tab">
+        <div class="container">
+          <ul class="list-unstyled m-0">
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-1" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-2.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Elly</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-1" id="payment-remind-1">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-2" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-3.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Alex</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-2" id="payment-remind-2">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-3" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-4.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mitty</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-3" id="payment-remind-3">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-4" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-5.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Felix</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-4" id="payment-remind-4">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="container">
-        <ul class="nav navtab-bar navtab-black nav-pills mb-6 rounded-120 fs-caption-lg" id="remind-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80 active" id="payment-remind-tab" data-bs-toggle="pill"
-              data-bs-target="#payment-remind" type="button" role="tab" aria-controls="payment-remind"
-              aria-selected="true">需收款</button>
+      <div class="tab-pane fade" id="repayment-remind" role="tabpanel" aria-labelledby="repayment-remind-tab">
+        <ul class="list-unstyled m-0">
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-5" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-2.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Elly</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-5" id="payment-remind-5">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80" id="repayment-remind-tab" data-bs-toggle="pill"
-              data-bs-target="#repayment-remind" type="button" role="tab" aria-controls="repayment-remind"
-              aria-selected="false">需還款</button>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-6" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-3.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Alex</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-6" id="payment-remind-6">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80" id="all-payment-history-tab" data-bs-toggle="pill"
-              data-bs-target="#all-payment-history" type="button" role="tab" aria-controls="all-payment-history"
-              aria-selected="false">歷史款項</button>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-7" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-4.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mitty</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-7" id="payment-remind-7">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
+          </li>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-8" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-5.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Felix</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-8" id="payment-remind-8">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
           </li>
         </ul>
       </div>
-    </section>
-    <section class="remind-list overscroll-nobar">
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="payment-remind" role="tabpanel" aria-labelledby="payment-remind-tab">
-          <div class="container">
-            <ul class="list-unstyled m-0">
-              <li class="card rounded-0 border-0 border-bottom">
-                <div class="card-body p-4 rounded-160 d-flex align-items-center bg-white">
-                  <label for="payment-remind-1" class="d-flex align-items-center gap-3 me-3">
-                    <div class="py-2 px-3">
-                      <img src="../assets/img/avatar-2.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Elly</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                      <span class="fs-caption-md mb-1">須付款給</span>
-                      <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
-                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
-                    </div>
-                    <div class="py-2 px-3">
-                      <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
-                    </div>
-                  </label>
-                  <input class="form-check-input check-input-black-950 m-0 p-3 remind-checkbox" type="checkbox" value="payment-remind-1"
-                    id="payment-remind-1">
+      <div class="tab-pane fade" id="all-payment-history" role="tabpanel" aria-labelledby="all-payment-history-tab">
+        <ul class="list-unstyled m-0">
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-9" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-2.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Elly</span>
                 </div>
-                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                  <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
                 </div>
-              </li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="repayment-remind" role="tabpanel" aria-labelledby="repayment-remind-tab">2</div>
-        <div class="tab-pane fade" id="all-payment-history" role="tabpanel" aria-labelledby="all-payment-history-tab">3
-        </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-9" id="payment-remind-9">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
+          </li>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-10" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-3.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Alex</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-10" id="payment-remind-10">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
+          </li>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-11" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-4.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mitty</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-11" id="payment-remind-11">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
+          </li>
+          <li class="card rounded-0 border-0 border-bottom">
+            <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+              <label for="payment-remind-12" class="d-flex align-items-center justify-content-between w-100 me-3">
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-5.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Felix</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <span class="fs-caption-md mb-1">須付款給</span>
+                  <img src="../assets/img/arrow-right-lg.png" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                  <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
+                </div>
+                <div class="py-2 px-3">
+                  <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar d-block mb-1">
+                  <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                </div>
+              </label>
+              <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-12" id="payment-remind-12">
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+              <a href="./index.html" class="details-link fs-caption-md text-black-950">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+            </div>
+          </li>
+        </ul>
       </div>
-    </section>
-    <%- include('./layout/bottombar'); -%>
-      <script type="module" src="../main.js"></script>
+    </div>
+  </section>
+  <section class="mt-4">
+    <div class="container">
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-lg btn-outline-black-300 w-50 rounded-160 fs-title-lg fw-bold text-black-950 lh-sm">已完成付款</button>
+        <button type="button" class="btn btn-lg btn-black-950 w-50 rounded-160 fs-title-lg fw-bold text-white lh-sm">提醒款項</button>
+      </div>
+    </div>
+  </section>
+  <%- include('./layout/bottombar'); -%>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>
