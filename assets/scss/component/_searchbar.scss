@@ -1,0 +1,16 @@
+.deco-searchbar{
+    position: relative;
+    &::before{
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top:50%;
+        left: calc(0% + 12px);
+        transform: translate(0%,-50%);
+        background-image: url(../img/icon/search-gray.svg);
+        background-position: center;
+        background-size: contain;
+        content: "";
+    }
+}
