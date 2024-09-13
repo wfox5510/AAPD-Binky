@@ -1,0 +1,64 @@
+.head-payment-remind {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.remind-list {
+  height: calc(100vh - 285px);
+}
+
+.details-link {
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.remind-check {
+  padding: 14px;
+  border: 2px solid $white;
+}
+
+.remind-check:has(input:checked) {
+  border: 2px solid $black-700;
+}
+
+.offcanvas.offcanvas-detail {
+  width: 100%;
+  top: calc(0% + 44px);
+  height: calc(100vh - 76px);
+  border: 0px;
+  .offcanvas-body{
+    height: calc(100vh - 76px);
+  }
+}
+
+.bankid-copy{
+  padding: 6px;
+}
+
+.remind-method-list{
+  overflow: hidden;
+  li{
+    height: 48px;
+    display: flex;
+    align-items: center;  
+  }
+  li+li{
+    border-top:1px solid $black-100;
+  }
+}
+
+.remind-method-list-black{
+  a{
+    color: $black-950;
+  }
+  li:hover,li:focus{
+    background: $black-950;
+    a{
+      color: $white;
+    }
+  }
+}

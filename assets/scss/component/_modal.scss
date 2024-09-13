@@ -1,0 +1,47 @@
+.modal-dialog.modal-dialog-bottom {
+  height: calc(100vh - 32px);
+  max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  .modal-content {
+    border-radius: 32px 32px 0px 0px;
+  }
+}
+
+.modal.fade .modal-dialog.modal-dialog-bottom {
+  transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-bottom {
+  transform: translateY(0);
+}
+
+.modal.fade:not(.show) .modal-dialog.modal-dialog-bottom {
+  transform: translateY(40%);
+}
+
+.modal-deco-top{
+  position: relative;
+  height: 20px;
+  width: 100%;
+  &::before{
+    content: "";
+    width: 36px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2.5px solid $black-200;
+    border-radius: $border-radius-pill;
+  }
+}
+
+@keyframes modalAnimate-bottom-in {
+  from {
+    transform: translateY(40%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+ 
