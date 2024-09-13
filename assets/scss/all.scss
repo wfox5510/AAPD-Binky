@@ -1,4 +1,7 @@
 @import "./base/base";
+@import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
 
@@ -6,8 +9,15 @@
 @import "./utils/utilities";
 @import "bootstrap/scss/utilities/api";
 
+@import './component/searchbar';
+@import './component/navtab';
+@import './component/avatar';
+
 @import './layout/header.scss';
 @import './layout/footer.scss';
+@import './layout/bottombar';
+@import './layout/topbar';
 
 @import './pages/index.scss';
-@import './pages/split_method';
+@import './pages/split';
+@import './pages/split_method.scss';
