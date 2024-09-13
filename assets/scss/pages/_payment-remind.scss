@@ -38,3 +38,27 @@
 .bankid-copy{
   padding: 6px;
 }
+
+.remind-method-list{
+  overflow: hidden;
+  li{
+    height: 48px;
+    display: flex;
+    align-items: center;  
+  }
+  li+li{
+    border-top:1px solid $black-100;
+  }
+}
+
+.remind-method-list-black{
+  a{
+    color: $black-950;
+  }
+  li:hover,li:focus{
+    background: $black-950;
+    a{
+      color: $white;
+    }
+  }
+}
