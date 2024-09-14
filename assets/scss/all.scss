@@ -12,6 +12,7 @@
 @import './component/searchbar';
 @import './component/navtab';
 @import './component/avatar';
+@import './component/modal';
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
@@ -20,7 +21,9 @@
 
 @import './pages/index.scss';
 @import './pages/split';
-@import './pages/split_method.scss';
+@import './pages/payment-remind';
+@import './pages/split_method.scss'
+
 
 
 

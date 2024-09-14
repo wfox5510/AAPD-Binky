@@ -1,57 +1,60 @@
-.container{
+.split-method {
+  .container {
     background-color: #ffffff;
-}
+  }
 
-.bar{
+  .bar {
     width: 36px;
     height: 4px;
-}
+  }
 
-.bottom-bar{
+  .bottom-bar {
     width: 134px;
     height: 5px;
-}
+  }
 
-.modal-dialog {
+  .modal-dialog {
     position: absolute;
     bottom: 0;
     margin: var(--bs-modal-margin);
     height: auto;
-}
+  }
 
-.modal{
+  .modal {
     --bs-modal-margin: 0;
-}
+  }
 
-.modal-content{
+  .modal-content {
     border-radius: 32px 32px 0 0;
-}
+  }
 
-.modal-header{
+  .modal-header {
     border-bottom: none;
     padding: 20px 16px;
-}
+  }
 
-.modal-footer{
+  .modal-footer {
     border-top: none;
-}
+  }
 
-.modal.fade .modal-dialog{
+  .modal.fade .modal-dialog {
     transform: translate(0);
-}
+  }
 
-.modal-backdrop{
+  .modal-backdrop {
     background-color: transparent;
-}
+  }
 
-.keyboard, .numkeyboardOK{
+  .keyboard,
+  .numkeyboardOK {
     width: 62.5px;
     height: 48px;
     padding: 10px;
     border-radius: 12px;
     border: 0;
-}
+  }
 
-.keyboardOK{
+  .keyboardOK {
     height: 104px;
+  }
 }
