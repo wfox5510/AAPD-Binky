@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>分帳</title>
+  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-6314df1b.js"></script>
+  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-e2ff5881.css">
+</head>
+
+<body>
+  <div class="topbar">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAqCAYAAABWZ768AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKwSURBVHgB7ZrtbdswEIbfBv1fbxB2groTVJ2g6QbqBM4GZieoM4HVCdpOYG2QbGB2gnaDhAfJMHXil5zIAeh7gAMk60hKPN3ppWRAEARBEARBEARBEAShFN5k+i2s1dau+23ir7W2t7lZ4Diui0E+ytn+31tx0CT9sPYYsT2GkzEH28DY1xltlbUda7dDgSh0wXjMsH/WbjAPdWTcVMBW/bnxdkUGzBcsulBtbeM5ThOj8LIoNg6f/FDAqDL8QjjQxQWsRl7Z05h3IrbsHDZIB2yJ8c10P/N5vjp0Qe4Fqohvw3wrvAy1p1+NdMC4z6b/vYiAXQV+r5ztFnE11rD90LNs0ferkIZ81myMFtMw1j5bu0VB+AKm2L5BnAe2/8Xjc3j4051N5WmJOCvnPIy175jGnbWPOM+S49WhTHDLx++E/xLjhzpfM+0n9KmYb+0c00iXxEWg32JLIl9UfkJ4EghftrzD6biT2WBcclMUuSBOwdXYNuCn4Jf/PIi3GErzUElcIS52NNIZFqKIDAuhMF7zUGBqdMKBhMXa8eGyuQr0Se0WmWNqj4+GBCyImxUxu/f4pkSFjy2GN4cPjQsP2FXkGJXFb4irxNbaV4yzJtbGh8JQXExVhRfD28TxBl1QKnRy/RAYY+0njrL5g9PmlDfh7jOyRb7QeI/jFwcDIRtXeJxSbnzCZYrtM8YooiSGMoyeQW6ZaxGmwlDN/YFwdhqkVd8Bnh0q4Ec3wU3guGTYM6kwnpCK+VAG7pC3Xlsjbx2WQkNkfZAGfglP35nogn3rNBXoi2dQ6nVXCI0LD1hMJdLaitSfmw1L+LPDoHszbiDMSmwdRtKc3njTmshEfJrez0T6umNtivrkcU5y/zVFVBiqR4OutOWuuVRvD7jQF7SCIAiCIAiCIAiCIMzME8rFbjMkZ2CxAAAAAElFTkSuQmCC" alt="time" width="54" height="21">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAKCAYAAAAQP8Y1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGZSURBVHgBtZU9TsNAEIVfUKCBIjTQpDAVFVJEQ4OEIw6Q5Aa+AXACnBMYTgC5AVSUINFQIAElDXGXNg0FooD3tGNiRY7jRcmTvjjenf2ZnfFODX4KSEhejVmSTYc07H1M3sgDSUvGrZNdsgp/fZN38pk11OCnC3ICt8Gdgv4uSeAOoWyOPpzDecmxY/KR36CHNkmT3ME5OlcBiUlk79fkhwwLbBPrE/fkFC6Comtjh7nxwdR4ReyAnOfm8UHrHSJ36CsoV2iLXWG+dHIpaZOe/e9gkp6x9Q1mjFcqKmIR/ietk0Us0E+9wCixZx9+iuCcaJEXFKdmnLMbY3naI1/TzoVw4ZVu4S9tOIJz7MbmSK3tyJ4DlF8qC5Ocy/K/h8WcZgR3aaT2X5GMc/0plq9nMtI3F1hDC4uTyoS+1cTQBZOi3DF9LxvkEv6HLHtlyZrNM1Jj3ToatnDVSavYncFdMkrHdgV7ZZBuzCeyD39tky3ymDWozilick6nrU2H9syKdP49MFJUTy+fy0O1rolJ8feR1lCN/Ktxv6L+aLpBqtMTAAAAAElFTkSuQmCC" alt="phone-status" width="54.33" height="9.24">
+</div>  <section class="mt-11">
+    <div class="container">
+      <h2 class="py-3 text-center fs-title-lg fw-bold">分帳</h2>
+      <div class="deco-searchbar d-flex align-items-center py-4">
+        <input type="text" class="form-control bg-white border-0 py-2 ps-9 me-2 fs-body-md rounded-80" placeholder="請輸入旅程或成員名稱">
+        <img src="/AAPD-Binky/assets/info-6a5bcbc7.svg" alt="" class="p-2" width="32" height="32">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <ul class="nav navtab-bar navtab-black nav-pills mb-6 rounded-120 fs-caption-lg" id="pills-payment-split-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80 active" id="pills-all-payment-tab" data-bs-toggle="pill" data-bs-target="#pills-all-payment" type="button" role="tab" aria-controls="pills-all-payment" aria-selected="true">全部款項</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="pills-payment-tab" data-bs-toggle="pill" data-bs-target="#pills-payment" type="button" role="tab" aria-controls="pills-payment" aria-selected="false">需收款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="pills-repayment-tab" data-bs-toggle="pill" data-bs-target="#pills-repayment" type="button" role="tab" aria-controls="pills-repayment" aria-selected="false">需還款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="pills-payment-done-tab" data-bs-toggle="pill" data-bs-target="#pills-payment-done" type="button" role="tab" aria-controls="pills-payment-done" aria-selected="false">已完成</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="payment-list overscroll-nobar">
+    <div class="container">
+      <div class="tab-content mb-8" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-all-payment" role="tabpanel" aria-labelledby="pills-all-payment-tab">
+          <ul class="list-unstyled m-0 d-flex flex-column gap-4">
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-1">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">東京滑雪團</h3>
+                    <span class="fs-caption-md">2024/12/01 - 2024/12/06</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+3</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>6,377</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-1" id="payment-1">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-2">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台北大縱走</h3>
+                    <span class="fs-caption-md">2024/11/20 - 2024/11/21</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+1</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-orange-200 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>1,837</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-2" id="payment-2">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-3">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台南吃吃喝喝</h3>
+                    <span class="fs-caption-md">2024/11/13 - 2024/11/15</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+2</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>824</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-3" id="payment-3">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-4">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台中看表演</h3>
+                    <span class="fs-caption-md">2024/10/29 - 2024/10/30</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>10,355</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-4" id="payment-4">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab">
+          <ul class="list-unstyled m-0 d-flex flex-column gap-4">
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-5">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">東京滑雪團</h3>
+                    <span class="fs-caption-md">2024/12/01 - 2024/12/06</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+3</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>6,377</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-5" id="payment-5">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-6">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台北大縱走</h3>
+                    <span class="fs-caption-md">2024/11/20 - 2024/11/21</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+1</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-orange-200 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>1,837</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-6" id="payment-6">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-7">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台南吃吃喝喝</h3>
+                    <span class="fs-caption-md">2024/11/13 - 2024/11/15</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+2</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>824</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-7" id="payment-7">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-8">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台中看表演</h3>
+                    <span class="fs-caption-md">2024/10/29 - 2024/10/30</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>10,355</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-8" id="payment-8">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-repayment" role="tabpanel" aria-labelledby="pills-repayment-tab">
+          <ul class="list-unstyled m-0 d-flex flex-column gap-4">
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-9">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">東京滑雪團</h3>
+                    <span class="fs-caption-md">2024/12/01 - 2024/12/06</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+3</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>6,377</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-9" id="payment-9">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-10">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台北大縱走</h3>
+                    <span class="fs-caption-md">2024/11/20 - 2024/11/21</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+1</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-orange-200 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>1,837</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-10" id="payment-10">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-11">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台南吃吃喝喝</h3>
+                    <span class="fs-caption-md">2024/11/13 - 2024/11/15</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+2</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>824</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-11" id="payment-11">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-12">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台中看表演</h3>
+                    <span class="fs-caption-md">2024/10/29 - 2024/10/30</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>10,355</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-12" id="payment-12">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-payment-done" role="tabpanel" aria-labelledby="pills-payment-done-tab">
+          <ul class="list-unstyled m-0 d-flex flex-column gap-4">
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-13">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">東京滑雪團</h3>
+                    <span class="fs-caption-md">2024/12/01 - 2024/12/06</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+3</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>6,377</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-13" id="payment-13">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-14">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台北大縱走</h3>
+                    <span class="fs-caption-md">2024/11/20 - 2024/11/21</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+1</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-orange-200 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>1,837</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-14" id="payment-14">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-15">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台南吃吃喝喝</h3>
+                    <span class="fs-caption-md">2024/11/13 - 2024/11/15</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><span class="avatar-sm avatar-sm-tag rounded-pill border border-2 border-white">+2</span></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>824</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-15" id="payment-15">
+              </div>
+            </li>
+            <li class="card border-0 bg-white">
+              <div class="card-body d-flex align-items-center py-0">
+                <label class="d-flex w-100 py-2 me-6" for="payment-16">
+                  <div class="d-flex flex-column gap-1 me-auto">
+                    <h3 class="fs-title-md fw-bold">台中看表演</h3>
+                    <span class="fs-caption-md">2024/10/29 - 2024/10/30</span>
+                    <ul class="avatar-list list-unstyled m-0">
+                      <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                      <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" class="avatar-sm rounded-pill border border-2 border-white"></li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center text-black-950">
+                    <span class="text-end pe-3 mb-1 fs-caption-md">需收款</span>
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold"><span class="JPY-symbol">¥</span>10,355</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-16" id="payment-16">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="./payment-remind.html" class="btn btn-lg btn-black-950 w-100 fs-title-lg fw-bold">分帳</a>
+    </div>
+  </section>
+  <div class="scaner-bar container">
+    <ul class="nav bg-black-950 h-100 w-100 rounded-200 d-flex" id="" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active d-flex flex-column align-items-center gap-1" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+          <i class="fi fi-rr-map"></i>
+          <span class="fs-caption-lg">旅途</span>
+        </button>
+      </li>
+      <li class="position-relative">
+        <a href="#" class="scan-btn">
+          <i class="fi fi-br-plus"></i>
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link d-flex flex-column align-items-center gap-1" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+          <i class="fi fi-rr-credit-card"></i>
+          <span class="fs-caption-lg">分帳</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="bottombar">
+  
+</div>  
+</body>
+
+</html>
