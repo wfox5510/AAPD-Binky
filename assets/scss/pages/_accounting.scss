@@ -1,0 +1,70 @@
+.navtab-bar-account {
+  margin: 0 auto;
+  width: 181px;
+}
+
+.accounting-page {
+  height: calc(100vh - 195.5px);
+}
+
+.expenditure-navbar{
+  position: relative;
+  z-index: 100;
+}
+
+.expenditureCAT-tab {
+  button {
+    line-height: 0;
+  }
+
+  .nav-link {
+    background: $black-700;
+    color: $white;
+  }
+
+  .expenditureCAT-food-tab.active {
+    background: $purple-200;
+    color: $black-950;
+  }
+
+  .expenditureCAT-trafic-tab.active {
+    background: $green-200;
+    color: $black-950;
+  }
+
+  .expenditureCAT-events-tab.active {
+    background: #FCE697;
+    color: $black-950;
+  }
+
+  .expenditureCAT-stay-tab.active {
+    background: $orange-200;
+    color: $black-950;
+  }
+
+  .expenditureCAT-other-tab.active {
+    background: $black-200;
+    color: $black-950;
+  }
+}
+
+.expenditureCAT-tabContent {
+  .tab-pane.fade {
+    transition: transform 0.2s ease-out;
+  }
+
+  .tab-pane.fade.show{
+    transform: translateY(0%);
+  }
+
+  .tab-pane.fade:not(.show) {
+    transform: translateY(-40%);
+  }
+  .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show{
+    border: 1px solid $black-950;
+  }
+}
+
+.expenditureCAT-events{
+  background-color: #FCE697;
+}

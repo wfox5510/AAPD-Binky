@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記帳</title>
+</head>
+
+<body>
+  <%- include('./layout/topbar'); -%>
+    <section class="mt-11 mb-4">
+      <div class="head-payment-remind mb-4">
+        <a href="./split.html" class="d-block p-2 me-4"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+        <h2 class="fs-title-lg fw-bold">新增紀錄</h2>
+        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">保存</a>
+      </div>
+      <div class="container">
+        <ul class="nav navtab-bar navtab-bar-account navtab-black nav-pills mb-4 rounded-120 fs-caption-lg"
+          id="accounting-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80 active" id="expenditure-tab" data-bs-toggle="pill"
+              data-bs-target="#expenditure" type="button" role="tab" aria-controls="expenditure"
+              aria-selected="true">支出</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80" id="income-tab" data-bs-toggle="pill" data-bs-target="#income"
+              type="button" role="tab" aria-controls="income" aria-selected="false">收入</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="tab-content accounting-page" id="accounting-TabContent">
+          <div class="tab-pane show active" id="expenditure" role="tabpanel" aria-labelledby="expenditure-tab">
+            <div class="expenditure-navbar rounded-200 bg-black-950 text-white px-4 pt-6 pb-4">
+              <div class="d-flex align-items-center justify-content-between py-1 mb-7">
+                <span class="inline-black fs-display-md fw-bold lh-1">¥6,337</span>
+                <div class="dropdown currency-select">
+                  <a class="d-flex align-items-center text-black-950 bg-white px-3 py-2 rounded-pill fs-caption-lg"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="symbol">¥</span>JYP<i class="fi fi-rr-angle-small-down ms-1 fs-body-lg"></i>
+                  </a>
+                  <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                    <li class="dropdown-item"><span class="symbol">$</span>TWD</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>KRW</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>USD</li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="nav nav-pills expenditureCAT-tab justify-content-between mb-3" id="expenditureCAT-tab"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-food-tab  active"
+                    id="expenditureCAT-food-tab" data-bs-toggle="pill" data-bs-target="#expenditureCAT-food"
+                    type="button" role="tab" aria-controls="expenditureCAT-food" aria-selected="true">
+                    <i class="fi fi-ss-utensils"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">飲食</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-trafic-tab" id="expenditureCAT-trafic-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-trafic" type="button" role="tab"
+                    aria-controls="expenditureCAT-trafic" aria-selected="true">
+                    <i class="fi fi-ss-train"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">交通</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-events-tab" id="expenditureCAT-events-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-events" type="button" role="tab"
+                    aria-controls="expenditureCAT-events" aria-selected="true">
+                    <i class="fi fi-ss-bowling"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">活動</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-stay-tab" id="expenditureCAT-stay-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-stay" type="button" role="tab"
+                    aria-controls="expenditureCAT-stay" aria-selected="true">
+                    <i class="fi fi-ss-bed"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">住宿</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-other-tab" id="expenditureCAT-other-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-other" type="button" role="tab"
+                    aria-controls="expenditureCAT-other" aria-selected="true">
+                    <i class="fi fi-ss-menu-dots"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">其他</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content expenditureCAT-tabContent" id="expenditureCAT-tabContent">
+              <div class="tab-pane expenditureCAT-food fade show active pt-13 px-4 mt-n8 bg-purple-200 rounded-200"
+                id="expenditureCAT-food" role="tabpanel" aria-labelledby="expenditureCAT-food-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option1">早餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option2">午餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option3">晚餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option4">飲料</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option5">點心</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option6">其他</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane expenditureCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="expenditureCAT-events" role="tabpanel"
+                aria-labelledby="expenditureCAT-events-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option1">門票</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option2">購物</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option3">表演</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="income" role="tabpanel" aria-labelledby="income-tab">...</div>
+        </div>
+      </div>
+    </section>
+    <%- include('./layout/bottombar'); -%>
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>
