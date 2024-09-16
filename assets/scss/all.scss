@@ -1,6 +1,8 @@
 @import "./base/base";
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-chubby/css/uicons-regular-chubby.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
@@ -22,8 +24,8 @@
 @import './pages/index.scss';
 @import './pages/split';
 @import './pages/payment-remind';
-@import './pages/split_method.scss'
-
+@import './pages/split_method.scss';
+@import './pages/accounting.scss';
 
 
 

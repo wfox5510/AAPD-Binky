@@ -9,6 +9,7 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
               120: 12px,
               160: 16px,
               200: 20px,
+              240: 24px,
             ),
           ),
         ),
@@ -30,7 +31,7 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
       ),
     ));
 
-.JPY-symbol,.negative-symbol{
+.JPY-symbol,.negative-symbol,.symbol{
   display: inline-block;
   margin-right: 2px;
 }
@@ -59,4 +60,13 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
 
 .border-top-dashed{
   border-top:1px dashed;
+}
+
+.phone-layout{
+  padding-bottom: 96px;
+  height: calc(100vh - 76px);
+}
+
+.lh-0{
+  line-height: 0;
 }

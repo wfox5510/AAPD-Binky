@@ -80,3 +80,83 @@
   padding-bottom: 96px;
   height: calc(100vh - 295px);
 }
+.currency-select{
+  .dropdown-menu{
+    min-width: 60px;
+    overflow: hidden;
+  }
+  .dropdown-item{
+    color: $black-950;
+    &:hover,.dropdown-item:focus{
+      background-color: $black-950;
+      color: $white;
+    }
+  }
+}
+.deco-star-bottomRight{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    bottom: calc(0% + 33px);
+    right: calc(0% + 33px);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 47px;
+    bottom: calc(0% + 6px);
+    right: calc(0% + -3px);
+  }
+}
+
+.deco-star-left{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    top: calc(0% + 10px);
+    left: calc(0% + 12px);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 47px;
+    top: calc(0% + 42px);
+    left: calc(0% + 31px);
+  }
+}
+
+.myTravel-head{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.travel-card-banner{
+  position: relative;
+  .travel-img{
+    border-radius: 16px 16px 12px 12px;
+  }
+  .avatar-list{
+    position: absolute;
+    bottom: calc(0% + 12px);
+    right: calc(0% + 12px);
+  }
+}
