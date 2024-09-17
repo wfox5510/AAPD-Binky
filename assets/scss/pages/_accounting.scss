@@ -7,12 +7,12 @@
   height: calc(100vh - 195.5px);
 }
 
-.expenditure-navbar{
+.expenditure-navbar,.income-navbar {
   position: relative;
   z-index: 100;
 }
 
-.expenditureCAT-tab {
+.expenditureCAT-tab,.incomeCAT-tab {
   button {
     line-height: 0;
   }
@@ -22,49 +22,63 @@
     color: $white;
   }
 
-  .expenditureCAT-food-tab.active {
+  .expenditureCAT-food-tab.active,.incomeCAT-food-tab.active {
     background: $purple-200;
     color: $black-950;
   }
 
-  .expenditureCAT-trafic-tab.active {
+  .expenditureCAT-trafic-tab.active,.incomeCAT-trafic-tab.active {
     background: $green-200;
     color: $black-950;
   }
 
-  .expenditureCAT-events-tab.active {
+  .expenditureCAT-events-tab.active,.incomeCAT-events-tab.active {
     background: #FCE697;
     color: $black-950;
   }
 
-  .expenditureCAT-stay-tab.active {
+  .expenditureCAT-stay-tab.active,.incomeCAT-stay-tab.active {
     background: $orange-200;
     color: $black-950;
   }
 
-  .expenditureCAT-other-tab.active {
+  .expenditureCAT-other-tab.active,.incomeCAT-other-tab.active {
     background: $black-200;
     color: $black-950;
   }
 }
 
-.expenditureCAT-tabContent {
+.expenditureCAT-tabContent,.incomeCAT-tabContent {
   .tab-pane.fade {
     transition: transform 0.2s ease-out;
   }
 
-  .tab-pane.fade.show{
+  .tab-pane.fade.show {
     transform: translateY(0%);
   }
 
   .tab-pane.fade:not(.show) {
     transform: translateY(-40%);
   }
-  .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show{
+
+  .btn-check:checked+.btn,
+  :not(.btn-check)+.btn:active,
+  .btn:first-child:active,
+  .btn.active,
+  .btn.show {
     border: 1px solid $black-950;
   }
 }
 
-.expenditureCAT-events{
+.expenditureCAT-events,.incomeCAT-events {
   background-color: #FCE697;
+}
+
+.accounting-page input::placeholder {
+  color: $black-300;
+}
+
+.accounting-addReceipt{
+  border-radius: 32px 32px 0px 0px;
+  background: $white;
 }

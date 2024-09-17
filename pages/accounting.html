@@ -32,9 +32,10 @@
       </div>
     </section>
     <section>
-      <div class="container">
-        <div class="tab-content accounting-page" id="accounting-TabContent">
-          <div class="tab-pane show active" id="expenditure" role="tabpanel" aria-labelledby="expenditure-tab">
+      <div class="tab-content accounting-page overscroll-nobar" id="accounting-TabContent">
+        <!--支出頁面 tabPage-->
+        <div class="tab-pane show active mb-8" id="expenditure" role="tabpanel" aria-labelledby="expenditure-tab">
+          <div class="container">
             <div class="expenditure-navbar rounded-200 bg-black-950 text-white px-4 pt-6 pb-4">
               <div class="d-flex align-items-center justify-content-between py-1 mb-7">
                 <span class="inline-black fs-display-md fw-bold lh-1">¥6,337</span>
@@ -134,11 +135,12 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <a href="##" class="d-block lh-0 p-2 mb-1"><i class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
                 </div>
               </div>
-              <div class="tab-pane expenditureCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="expenditureCAT-events" role="tabpanel"
-                aria-labelledby="expenditureCAT-events-tab">
+              <div class="tab-pane expenditureCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="expenditureCAT-events"
+                role="tabpanel" aria-labelledby="expenditureCAT-events-tab">
                 <div class="row row-cols-4 g-2 gy-3 mb-4">
                   <div class="col">
                     <input type="radio" class="btn-check" name="options" id="events-option1" autocomplete="off" checked>
@@ -161,15 +163,261 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <a href="##" class="d-block lh-0 p-2 mb-1"><i class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="income" role="tabpanel" aria-labelledby="income-tab">...</div>
+        </div>
+        <!--收入頁面 tabPage-->
+        <div class="tab-pane mb-8" id="income" role="tabpanel" aria-labelledby="income-tab">
+          <div class="container">
+            <div class="income-navbar rounded-200 bg-black-950 text-white px-4 pt-6 pb-4">
+              <div class="d-flex align-items-center justify-content-between py-1 mb-7">
+                <span class="inline-black fs-display-md fw-bold lh-1">¥6,337</span>
+                <div class="dropdown currency-select">
+                  <a class="d-flex align-items-center text-black-950 bg-white px-3 py-2 rounded-pill fs-caption-lg"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="symbol">¥</span>JYP<i class="fi fi-rr-angle-small-down ms-1 fs-body-lg"></i>
+                  </a>
+                  <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                    <li class="dropdown-item"><span class="symbol">$</span>TWD</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>KRW</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>USD</li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="nav nav-pills incomeCAT-tab justify-content-between mb-3" id="incomeCAT-tab"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-food-tab  active"
+                    id="incomeCAT-food-tab" data-bs-toggle="pill" data-bs-target="#incomeCAT-food"
+                    type="button" role="tab" aria-controls="incomeCAT-food" aria-selected="true">
+                    <i class="fi fi-ss-utensils"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">飲食</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-trafic-tab" id="incomeCAT-trafic-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-trafic" type="button" role="tab"
+                    aria-controls="incomeCAT-trafic" aria-selected="true">
+                    <i class="fi fi-ss-train"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">交通</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-events-tab" id="incomeCAT-events-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-events" type="button" role="tab"
+                    aria-controls="incomeCAT-events" aria-selected="true">
+                    <i class="fi fi-ss-bowling"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">活動</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-stay-tab" id="incomeCAT-stay-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-stay" type="button" role="tab"
+                    aria-controls="incomeCAT-stay" aria-selected="true">
+                    <i class="fi fi-ss-bed"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">住宿</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-other-tab" id="incomeCAT-other-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-other" type="button" role="tab"
+                    aria-controls="incomeCAT-other" aria-selected="true">
+                    <i class="fi fi-ss-menu-dots"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">其他</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content incomeCAT-tabContent" id="incomeCAT-tabContent">
+              <div class="tab-pane incomeCAT-food fade show active pt-13 px-4 mt-n8 bg-purple-200 rounded-200"
+                id="incomeCAT-food" role="tabpanel" aria-labelledby="incomeCAT-food-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option1">早餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option2">午餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option3">晚餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option4">飲料</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option5">點心</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option6">其他</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane incomeCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="incomeCAT-events"
+                role="tabpanel" aria-labelledby="incomeCAT-events-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option1">門票</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option2">購物</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option3">表演</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container">
+          <form action="" method="get">
+            <fieldset class="p-4 mb-8 position-relative bg-white rounded-160">
+              <legend class="mb-3 fs-title-md fw-semibold text-black-950">消費資訊</legend>
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyName">旅程名稱<span class="d-inline-block ms-1"
+                  style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyName" autocomplete="off">
+              <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+                for="journeyName" data-bs-toggle="modal" data-bs-target="#journeyNameModal">東京滑雪團<i
+                  class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+              <label class="mb-2 fs-caption-md text-black-950 " for="paymentName">款項名稱</label>
+              <input type="text" id="paymentName"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入名稱">
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyDate">日期<span class="d-inline-block ms-1"
+                  style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyDate" autocomplete="off">
+              <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+                for="journeyDate" data-bs-toggle="modal" data-bs-target="#journeyDateModal">2023/11/22<i
+                  class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyPosition">地點</label>
+              <input type="text" id="journeyPosition"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入地點">
+              <label class="mb-2 fs-caption-md text-black-950 " for="paymentRemark">備註</label>
+              <input type="text" id="paymentRemark"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入備註">
+            </fieldset>
+            <fieldset class="p-4 mb-8 position-relative bg-white rounded-160">
+              <legend class="mb-3 fs-title-md fw-semibold text-black-950">分帳資訊</legend>
+              <label class="d-block mb-2 fs-caption-md text-black-950" for="paymentPayers">付款人<span
+                  class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="paymentPayers" autocomplete="off">
+              <label class="align-items-center mb-4 p-2 bg-black-50 rounded-pill text-black-950 fs-body-md lh-0"
+                for="paymentPayers"><i class="fi fi-rr-plus"></i></label>
+              <label class="d-block mb-2 fs-caption-md text-black-950" for="split-method">分帳方式<span
+                  class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyDate" autocomplete="off">
+              <a href="./split_method.html"
+                class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-300 fs-body-md"
+                for="journeyDate">請選擇<i class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></a>
+            </fieldset>
+          </form>
+        </div>
+        <div class="accounting-addReceipt">
+          <div class="container py-7">
+            <h2 class="mb-3 px-3 fs-title-md fw-semibold text-black-950 mb-4">消費明細</h2>
+            <div class="row row-cols-2 g-3">
+              <div class="col">
+                <button class="btn btn-light border border-black-300 rounded-120 w-100 fs-title-md fw-semibold"><i class="fi fi-rr-add me-2"></i>新增明細</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-light border border-black-300 rounded-120 w-100 fs-title-md fw-semibold"><i class="fi fi-rr-qr-scan me-2"></i>掃描明細</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--modal bottom-->
+      <div class="modal fade" id="journeyNameModal" tabindex="-1" aria-labelledby="journeyNameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+          <div class="modal-content border-0 rounded-bottom-0 bg-black-50 ">
+            <div class="modal-header d-block py-0">
+              <div class="modal-deco-top"></div>
+              <h5 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="journeyNameLabel">分享方式</h5>
+            </div>
+            <div class="modal-body py-2 rounded-160">
+              <ul class="remind-method-list remind-method-list-black list-unstyled m-0 bg-white rounded-160">
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">發送網址連結 (免下載APP)<i
+                      class="fi fi-rr-link ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">存成圖片<i
+                      class="fi fi-rr-picture ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">複製文字內容<i
+                      class="fi fi-rr-duplicate ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">掃描 QR Code<i
+                      class="fi fi-rr-qr-scan ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">透過電子郵件傳送<i
+                      class="fi fi-rr-envelope ms-auto fs-h4"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="journeyDateModal" tabindex="-1" aria-labelledby="journeyDateLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+          <div class="modal-content border-0 rounded-bottom-0 bg-black-50 ">
+            <div class="modal-header d-block py-0">
+              <div class="modal-deco-top"></div>
+              <h5 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="journeyDateLabel">日期</h5>
+            </div>
+            <div class="modal-body py-2 rounded-160">
+              <ul class="remind-method-list remind-method-list-black list-unstyled m-0 bg-white rounded-160">
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">發送網址連結 (免下載APP)<i
+                      class="fi fi-rr-link ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">存成圖片<i
+                      class="fi fi-rr-picture ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">複製文字內容<i
+                      class="fi fi-rr-duplicate ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">掃描 QR Code<i
+                      class="fi fi-rr-qr-scan ms-auto fs-h4"></i></a></li>
+                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">透過電子郵件傳送<i
+                      class="fi fi-rr-envelope ms-auto fs-h4"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <%- include('./layout/bottombar'); -%>
       <script type="module" src="../main.js"></script>
 </body>
