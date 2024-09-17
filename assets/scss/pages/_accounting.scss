@@ -82,3 +82,29 @@
   border-radius: 32px 32px 0px 0px;
   background: $white;
 }
+
+.deco-star-left-sm{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    top: calc(0% + 3px);
+    left: calc(0% + 4px);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/deco/Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    top: calc(0% + 12px);
+    left: calc(0% + 10px);
+  }
+}
