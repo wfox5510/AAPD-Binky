@@ -4,7 +4,8 @@
     display: flex;
     align-items: flex-end;
     .modal-content {
-        border-radius: 32px 32px 0px 0px;
+      border-radius: 32px 32px 0px 0px;
+      max-height: calc(80vh - 92px);
     }
 }
 
