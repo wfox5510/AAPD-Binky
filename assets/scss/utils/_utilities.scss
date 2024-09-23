@@ -70,3 +70,21 @@ $utilities: map-merge($utilities, ("rounded": map-merge(map-get($utilities, "rou
 .lh-0{
   line-height: 0;
 }
+
+.check-input-black-950 {
+  background-color: $white;
+  &:checked {
+    background-color: $black-950;
+    border-color: $black-950;
+  }
+  &:focus{
+    outline: none;
+    border-color:rgb(222, 226, 230);
+    box-shadow: 0 0 0 0;
+  }
+  &:active{
+    border-color:rgb(222, 226, 230);
+    background-color: $white;
+    filter: brightness(100%);
+  }
+}

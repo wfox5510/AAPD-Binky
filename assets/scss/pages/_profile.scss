@@ -1,0 +1,23 @@
+.profile-layout{
+  height: calc(100vh - 136px);
+}
+.change-photos-btn{
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+.input-password{
+  display: block;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/icon/eye.png);
+    background-size: contain;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    top:50%;
+    right:calc(0% + 16px);
+  }
+}

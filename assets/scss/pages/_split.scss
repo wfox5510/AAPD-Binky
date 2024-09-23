@@ -23,15 +23,6 @@
   }
 }
 
-.check-input-black-950 {
-  background-color: $white;
-
-  &:checked {
-    background-color: $black-950;
-    border-color: $black-950;
-  }
-}
-
 .scaner-bar {
   height: 64px;
   align-items: center;
@@ -79,6 +70,9 @@
 .payment-list{
   padding-bottom: 96px;
   height: calc(100vh - 295px);
+  .card-body:active{
+    background-color: $black-50;
+  }
 }
 .currency-select{
   .dropdown-menu{
@@ -120,6 +114,7 @@
 }
 
 .deco-star-left{
+  display: block;
   position: relative;
   &::before{
     content: "";

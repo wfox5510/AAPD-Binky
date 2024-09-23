@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>分帳</title>
+</head>
+
+<body>
+  <%- include('./layout/topbar'); -%>
+    <section class="mt-11 mb-4">
+      <div class="head-payment-remind mb-4">
+        <a href="./split.html" class="d-block p-2"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+        <h2 class="fs-title-lg fw-bold">基本資料</h2>
+        <span style="width: 32px;"></span>
+      </div>
+    </section>
+    <section class="profile-layout overscroll-nobar">
+      <div class="container ">
+        <div class="d-flex align-items-center mb-5">
+          <button type="button" class="border-0 p-0 pe-2 me-4 bg-black-50 position-relative">
+            <img src="../assets/img/avatar-1.png" alt="avatar" class="avatar-xl">
+            <i class="fi fi-rr-camera change-photos-btn p-2 bg-white rounded-pill"></i>
+          </button>
+          <h2 class="fs-h2 fw-semibold">Mia</h2>
+        </div>
+        <form action="" method="get">
+          <fieldset class="p-4 py-5 mb-5 position-relative bg-white rounded-160">
+            <legend class="d-block mb-3 fs-title-md fw-semibold text-black-950">基本資訊</legend>
+            <label class="d-block mb-2 fs-caption-md text-black-950 " for="profileName">帳號</label>
+            <input type="text" id="profileName"
+              class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md" placeholder=""
+              value="Mia">
+            <label class="d-block mb-2 fs-caption-md text-black-950 " for="profileEmail">E-mail</label>
+            <input type="text" id="profileEmail"
+              class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md" placeholder=""
+              value="Mia123@gmail.com">
+            <label class="d-block mb-2 fs-caption-md text-black-950 " for="profilePassword">密碼</label>
+            <div class="input-password mb-4 ">
+              <input type="password" id="profilePassword"
+                class="w-100 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md" placeholder=""
+                value="12345">
+            </div>
+          </fieldset>
+          <fieldset class="p-4 mb-8 position-relative bg-white rounded-160">
+            <legend class="mb-3 fs-title-md fw-semibold text-black-950">分帳設定</legend>
+            <label class="mb-2 fs-caption-md text-black-950 " for="profileCurrencySwitch">預設幣別<span
+                class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+            <input type="checkbox" class="btn-check" id="profileCurrencySwitch" autocomplete="off">
+            <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+              for="profileCurrencySwitch" data-bs-toggle="modal" data-bs-target="#profileCurrencySwitchModal">$ TWD<i
+                class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+            <label class="mb-2 fs-caption-md text-black-950 " for="profileBankAccount">收款帳戶<span
+                class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+            <input type="checkbox" class="btn-check" id="profileBankAccount" autocomplete="off">
+            <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+              for="profileBankAccount" data-bs-toggle="modal" data-bs-target="#profileBankAccountModal">未設定<i
+                class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+            <label class="mb-2 fs-caption-md text-black-950 " for="profileRepaymentPeriod">還款提醒日<span
+                class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+            <input type="checkbox" class="btn-check" id="profileRepaymentPeriod" autocomplete="off">
+            <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+              for="profileRepaymentPeriod" data-bs-toggle="modal" data-bs-target="#profileRepaymentPeriodModal">七天<i
+                class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <!--Modal Bottom-->
+    <div class="modal fade" id="profileCurrencySwitchModal" tabindex="-1" aria-labelledby="profileCurrencySwitchModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+        <div class="modal-content border-0 rounded-bottom-0 bg-white ">
+          <div class="modal-header border-0 d-block mb-2 py-0">
+            <div class="modal-deco-top"></div>
+            <h4 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="profileCurrencySwitchModalLabel">選擇幣別</h4>
+          </div>
+          <div class="deco-searchbar d-flex align-items-center mx-4">
+            <input type="text" class="form-control bg-black-50 border-0 py-2 ps-9 me-2 fs-body-md rounded-80"
+              placeholder="搜尋">
+          </div>
+          <div class="modal-body py-2 rounded-160 overscroll-nobar">            
+            <span class="d-block mb-2 mt-3 fs-caption-lg fw-semibold">最近使用</span>
+            <ul class="list-unstyled d-flex flex-column gap-3 m-0 mb-4 bg-white rounded-160">
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-1" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">JYP</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">日圓</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-1" id="profile-currency-select-1">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-2" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">TWD</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">新台幣</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-2" id="profile-currency-select-2">
+                </div>
+              </li>
+            </ul>
+            <span class="mb-2 fs-caption-lg fw-semibold">所有幣別</span>
+            <ul class="list-unstyled d-flex flex-column gap-3 m-0 mb-4 bg-white rounded-160">
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-3" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">AED</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">阿拉伯聯合大公國迪爾汗</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-3" id="profile-currency-select-3">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-4" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">AFN</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">阿富汗尼</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-4" id="profile-currency-select-4">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-5" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">ALL</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">阿爾巴尼亞列克</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-5" id="profile-currency-select-5">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-currency-select-6" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">AWD</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">亞美尼亞德拉姆</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-currency-select" value="profile-currency-select-6" id="profile-currency-select-6">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="profileBankAccountModal" tabindex="-1" aria-labelledby="profileBankAccountModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+        <div class="modal-content border-0 rounded-bottom-0 bg-white ">
+          <div class="modal-header mb-2 border-0 d-block py-0">
+            <div class="modal-deco-top"></div>
+            <h4 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="profileBankAccountModalLabel">選擇銀行</h4>
+          </div>
+          <div class="deco-searchbar d-flex align-items-center mx-4">
+            <input type="text" class="form-control bg-black-50 border-0 py-2 ps-9 me-2 fs-body-md rounded-80"
+              placeholder="搜尋">
+          </div>
+          <div class="modal-body py-2 rounded-160 overscroll-nobar">
+            <span class="d-block mb-2 mt-3 fs-caption-lg fw-semibold">最近使用</span>
+            <ul class="bankselect-list list-unstyled d-flex flex-column gap-2 m-0 mb-4 bg-white rounded-160">
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-1" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">812</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">台新銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-1" id="profile-bankacc-select-1">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-2" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">004</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">台灣銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-2" id="profile-bankacc-select-2">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-3" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">005</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">土地銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-3" id="profile-bankacc-select-3">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-4" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">006</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">合作金庫銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-4" id="profile-bankacc-select-4">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-5" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">007</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">第一銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-5" id="profile-bankacc-select-5">
+                </div>
+              </li>
+              <li class="card rounded-0 bg-white border-0">
+                <div class="card-body px-4 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                  <label for="profile-bankacc-select-6" class="me-auto w-100 fs-title-md">
+                    <span class="text-black-950 fw-bold">008</span><span class="d-inline-block mx-2">-</span><span
+                      class="fs-body-md">華南銀行</span>
+                  </label>
+                  <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                    type="radio" name="profile-bankacc-select" value="profile-bankacc-select-6" id="profile-bankacc-select-6">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('./layout/bottombar'); -%>
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>
