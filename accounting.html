@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記帳</title>
+  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-383a5221.js"></script>
+  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-c4670fba.css">
+</head>
+
+<body>
+  <div class="topbar">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAqCAYAAABWZ768AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKwSURBVHgB7ZrtbdswEIbfBv1fbxB2groTVJ2g6QbqBM4GZieoM4HVCdpOYG2QbGB2gnaDhAfJMHXil5zIAeh7gAMk60hKPN3ppWRAEARBEARBEARBEAShFN5k+i2s1dau+23ir7W2t7lZ4Diui0E+ytn+31tx0CT9sPYYsT2GkzEH28DY1xltlbUda7dDgSh0wXjMsH/WbjAPdWTcVMBW/bnxdkUGzBcsulBtbeM5ThOj8LIoNg6f/FDAqDL8QjjQxQWsRl7Z05h3IrbsHDZIB2yJ8c10P/N5vjp0Qe4Fqohvw3wrvAy1p1+NdMC4z6b/vYiAXQV+r5ztFnE11rD90LNs0ferkIZ81myMFtMw1j5bu0VB+AKm2L5BnAe2/8Xjc3j4051N5WmJOCvnPIy175jGnbWPOM+S49WhTHDLx++E/xLjhzpfM+0n9KmYb+0c00iXxEWg32JLIl9UfkJ4EghftrzD6biT2WBcclMUuSBOwdXYNuCn4Jf/PIi3GErzUElcIS52NNIZFqKIDAuhMF7zUGBqdMKBhMXa8eGyuQr0Se0WmWNqj4+GBCyImxUxu/f4pkSFjy2GN4cPjQsP2FXkGJXFb4irxNbaV4yzJtbGh8JQXExVhRfD28TxBl1QKnRy/RAYY+0njrL5g9PmlDfh7jOyRb7QeI/jFwcDIRtXeJxSbnzCZYrtM8YooiSGMoyeQW6ZaxGmwlDN/YFwdhqkVd8Bnh0q4Ec3wU3guGTYM6kwnpCK+VAG7pC3Xlsjbx2WQkNkfZAGfglP35nogn3rNBXoi2dQ6nVXCI0LD1hMJdLaitSfmw1L+LPDoHszbiDMSmwdRtKc3njTmshEfJrez0T6umNtivrkcU5y/zVFVBiqR4OutOWuuVRvD7jQF7SCIAiCIAiCIAiCIMzME8rFbjMkZ2CxAAAAAElFTkSuQmCC" alt="time" width="54" height="21">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAKCAYAAAAQP8Y1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGZSURBVHgBtZU9TsNAEIVfUKCBIjTQpDAVFVJEQ4OEIw6Q5Aa+AXACnBMYTgC5AVSUINFQIAElDXGXNg0FooD3tGNiRY7jRcmTvjjenf2ZnfFODX4KSEhejVmSTYc07H1M3sgDSUvGrZNdsgp/fZN38pk11OCnC3ICt8Gdgv4uSeAOoWyOPpzDecmxY/KR36CHNkmT3ME5OlcBiUlk79fkhwwLbBPrE/fkFC6Comtjh7nxwdR4ReyAnOfm8UHrHSJ36CsoV2iLXWG+dHIpaZOe/e9gkp6x9Q1mjFcqKmIR/ietk0Us0E+9wCixZx9+iuCcaJEXFKdmnLMbY3naI1/TzoVw4ZVu4S9tOIJz7MbmSK3tyJ4DlF8qC5Ocy/K/h8WcZgR3aaT2X5GMc/0plq9nMtI3F1hDC4uTyoS+1cTQBZOi3DF9LxvkEv6HLHtlyZrNM1Jj3ToatnDVSavYncFdMkrHdgV7ZZBuzCeyD39tky3ymDWozilick6nrU2H9syKdP49MFJUTy+fy0O1rolJ8feR1lCN/Ktxv6L+aLpBqtMTAAAAAElFTkSuQmCC" alt="phone-status" width="54.33" height="9.24">
+</div>    <section class="mt-11 mb-4">
+      <div class="head-payment-remind mb-4">
+        <a href="./split.html" class="d-block p-2 me-4"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+        <h2 class="fs-title-lg fw-bold">新增紀錄</h2>
+        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">保存</a>
+      </div>
+      <div class="container">
+        <ul class="nav navtab-bar navtab-bar-account navtab-black nav-pills mb-4 rounded-120 fs-caption-lg"
+          id="accounting-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80 active" id="expenditure-tab" data-bs-toggle="pill"
+              data-bs-target="#expenditure" type="button" role="tab" aria-controls="expenditure"
+              aria-selected="true">支出</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-80" id="income-tab" data-bs-toggle="pill" data-bs-target="#income"
+              type="button" role="tab" aria-controls="income" aria-selected="false">收入</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="tab-content accounting-page overscroll-nobar" id="accounting-TabContent">
+        <!--支出頁面 tabPage-->
+        <div class="tab-pane show active mb-8" id="expenditure" role="tabpanel" aria-labelledby="expenditure-tab">
+          <div class="container">
+            <div class="expenditure-navbar rounded-200 bg-black-950 text-white px-4 pt-6 pb-4">
+              <div class="d-flex align-items-center justify-content-between py-1 mb-7">
+                <span class="inline-black fs-display-md fw-bold lh-1">¥6,337</span>
+                <div class="dropdown currency-select">
+                  <a class="d-flex align-items-center text-black-950 bg-white px-3 py-2 rounded-pill fs-caption-lg"
+                    data-bs-toggle="modal" data-bs-target="#currencySwitchModal">
+                    <span class="symbol">¥</span>JYP<i class="fi fi-rr-angle-small-down ms-1 fs-body-lg"></i>
+                  </a>
+                  <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1">
+                    <li class="dropdown-item"><span class="symbol">$</span>TWD</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>KRW</li>
+                    <li class="dropdown-item"><span class="symbol">$</span>USD</li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="nav nav-pills expenditureCAT-tab justify-content-between mb-3" id="expenditureCAT-tab"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-food-tab  active"
+                    id="expenditureCAT-food-tab" data-bs-toggle="pill" data-bs-target="#expenditureCAT-food"
+                    type="button" role="tab" aria-controls="expenditureCAT-food" aria-selected="true">
+                    <i class="fi fi-ss-utensils"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">飲食</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-trafic-tab" id="expenditureCAT-trafic-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-trafic" type="button" role="tab"
+                    aria-controls="expenditureCAT-trafic" aria-selected="true">
+                    <i class="fi fi-ss-train"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">交通</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-events-tab" id="expenditureCAT-events-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-events" type="button" role="tab"
+                    aria-controls="expenditureCAT-events" aria-selected="true">
+                    <i class="fi fi-ss-bowling"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">活動</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-stay-tab" id="expenditureCAT-stay-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-stay" type="button" role="tab"
+                    aria-controls="expenditureCAT-stay" aria-selected="true">
+                    <i class="fi fi-ss-bed"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">住宿</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 expenditureCAT-other-tab" id="expenditureCAT-other-tab"
+                    data-bs-toggle="pill" data-bs-target="#expenditureCAT-other" type="button" role="tab"
+                    aria-controls="expenditureCAT-other" aria-selected="true">
+                    <i class="fi fi-ss-menu-dots"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">其他</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content expenditureCAT-tabContent" id="expenditureCAT-tabContent">
+              <div class="tab-pane expenditureCAT-food fade show active pt-13 px-4 mt-n8 bg-purple-200 rounded-200"
+                id="expenditureCAT-food" role="tabpanel" aria-labelledby="expenditureCAT-food-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option1">早餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option2">午餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option3">晚餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option4">飲料</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option5">點心</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-option6">其他</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane expenditureCAT-trafic fade pt-13 px-4 mt-n8 bg-green-200 rounded-200"
+                id="expenditureCAT-trafic" role="tabpanel" aria-labelledby="expenditureCAT-trafic-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option1">捷運</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option2">公車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option3">火車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option4">高鐵</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option5">租車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option6">計程車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-option7" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-option7">機票</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane expenditureCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="expenditureCAT-events"
+                role="tabpanel" aria-labelledby="expenditureCAT-events-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option1">門票</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option2">購物</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-option3">表演</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane expenditureCAT-stay fade pt-13 px-4 mt-n8 rounded-200 bg-orange-200" id="expenditureCAT-stay"
+                role="tabpanel" aria-labelledby="expenditureCAT-stay-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-option1">飯店</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-option2">民宿</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-option3">營區</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane expenditureCAT-other fade pt-13 px-4 mt-n8 rounded-200 bg-black-200" id="expenditureCAT-other"
+                role="tabpanel" aria-labelledby="expenditureCAT-other-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-option1">小費</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-option2">雜費</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-option3">網卡</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-option4">其他</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--收入頁面 tabPage-->
+        <div class="tab-pane mb-8" id="income" role="tabpanel" aria-labelledby="income-tab">
+          <div class="container">
+            <div class="income-navbar rounded-200 bg-black-950 text-white px-4 pt-6 pb-4">
+              <div class="d-flex align-items-center justify-content-between py-1 mb-7">
+                <span class="inline-black fs-display-md fw-bold lh-1">¥6,337</span>
+                <div class="dropdown currency-select">
+                  <a class="d-flex align-items-center text-black-950 bg-white px-3 py-2 rounded-pill fs-caption-lg"
+                    data-bs-toggle="modal" data-bs-target="#currencySwitchModal">
+                    <span class="symbol">¥</span>JYP<i class="fi fi-rr-angle-small-down ms-1 fs-body-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <ul class="nav nav-pills incomeCAT-tab justify-content-between mb-3" id="incomeCAT-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-food-tab  active" id="incomeCAT-food-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-food" type="button" role="tab"
+                    aria-controls="incomeCAT-food" aria-selected="true">
+                    <i class="fi fi-ss-utensils"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">飲食</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-trafic-tab" id="incomeCAT-trafic-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-trafic" type="button" role="tab"
+                    aria-controls="incomeCAT-trafic" aria-selected="true">
+                    <i class="fi fi-ss-train"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">交通</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-events-tab" id="incomeCAT-events-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-events" type="button" role="tab"
+                    aria-controls="incomeCAT-events" aria-selected="true">
+                    <i class="fi fi-ss-bowling"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">活動</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-stay-tab" id="incomeCAT-stay-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-stay" type="button" role="tab"
+                    aria-controls="incomeCAT-stay" aria-selected="true">
+                    <i class="fi fi-ss-bed"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">住宿</span>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-160 mb-1 p-4 incomeCAT-other-tab" id="incomeCAT-other-tab"
+                    data-bs-toggle="pill" data-bs-target="#incomeCAT-other" type="button" role="tab"
+                    aria-controls="incomeCAT-other" aria-selected="true">
+                    <i class="fi fi-ss-menu-dots"></i>
+                  </button>
+                  <span class="d-block fs-caption-md text-center">其他</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content incomeCAT-tabContent" id="incomeCAT-tabContent">
+              <div class="tab-pane incomeCAT-food fade show active pt-13 px-4 mt-n8 bg-purple-200 rounded-200"
+                id="incomeCAT-food" role="tabpanel" aria-labelledby="incomeCAT-food-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option1">早餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option2">午餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option3">晚餐</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option4">飲料</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option5">點心</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="food-income-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="food-income-option6">其他</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane incomeCAT-trafic fade pt-13 px-4 mt-n8 bg-green-200 rounded-200"
+                id="incomeCAT-trafic" role="tabpanel" aria-labelledby="incomeCAT-trafic-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option1">捷運</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option2">公車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option3">火車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option4">高鐵</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option5" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option5">租車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option6" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option6">計程車</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="trafic-income-option7" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="trafic-income-option7">機票</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane incomeCAT-events fade pt-13 px-4 mt-n8 rounded-200" id="incomeCAT-events"
+                role="tabpanel" aria-labelledby="incomeCAT-events-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-income-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-income-option1">門票</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-income-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-income-option2">購物</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="events-income-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="events-income-option3">表演</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane incomeCAT-stay fade pt-13 px-4 mt-n8 rounded-200 bg-orange-200" id="incomeCAT-stay"
+                role="tabpanel" aria-labelledby="incomeCAT-stay-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-income-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-income-option1">飯店</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-income-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-income-option2">民宿</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="stay-income-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="stay-income-option3">營區</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-sm p-2 rounded-pill bg-white text-black-950 lh-0"><i
+                        class="fi fi-rr-plus"></i></label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+              <div class="tab-pane incomeCAT-other fade pt-13 px-4 mt-n8 rounded-200 bg-black-200" id="incomeCAT-other"
+                role="tabpanel" aria-labelledby="incomeCAT-other-tab">
+                <div class="row row-cols-4 g-2 gy-3 mb-4">
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-income-option1" autocomplete="off" checked>
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-income-option1">小費</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-income-option2" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-income-option2">雜費</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-income-option3" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-income-option3">網卡</label>
+                  </div>
+                  <div class="col">
+                    <input type="radio" class="btn-check" name="options" id="other-income-option4" autocomplete="off">
+                    <label class="btn btn-sm rounded-pill bg-white fs-caption-lg text-black-950 w-100 lh-1"
+                      for="other-income-option4">其他</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="##" class="d-block lh-0 p-2 mb-1"><i
+                      class="fi fi-rr-angle-small-up text-black-950 fs-body-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <form action="" method="get">
+            <fieldset class="p-4 mb-8 position-relative bg-white rounded-160">
+              <legend class="mb-3 fs-title-md fw-semibold text-black-950">消費資訊</legend>
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyName">旅程名稱<span class="d-inline-block ms-1"
+                  style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyName" autocomplete="off">
+              <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+                for="journeyName" data-bs-toggle="modal" data-bs-target="#journeyNameModal">東京滑雪團<i
+                  class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+              <label class="mb-2 fs-caption-md text-black-950 " for="paymentName">款項名稱</label>
+              <input type="text" id="paymentName"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入名稱">
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyDate">日期<span class="d-inline-block ms-1"
+                  style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyDate" autocomplete="off">
+              <label class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-950 fs-body-md"
+                for="journeyDate" data-bs-toggle="modal" data-bs-target="#journeyDateModal">2023/11/22<i
+                  class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></label>
+              <label class="mb-2 fs-caption-md text-black-950 " for="journeyPosition">地點</label>
+              <input type="text" id="journeyPosition"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入地點">
+              <label class="mb-2 fs-caption-md text-black-950 " for="paymentRemark">備註</label>
+              <input type="text" id="paymentRemark"
+                class="w-100 mb-4 px-4 py-3 bg-black-50 border-0 rounded-120 text-black-950 fs-body-md"
+                placeholder="請輸入備註">
+            </fieldset>
+            <fieldset class="p-4 mb-8 position-relative bg-white rounded-160">
+              <legend class="mb-3 fs-title-md fw-semibold text-black-950">分帳資訊</legend>
+              <label class="d-block mb-2 fs-caption-md text-black-950" for="paymentPayers">付款人<span
+                  class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="paymentPayers" autocomplete="off">
+              <label class="align-items-center mb-4 p-2 bg-black-50 rounded-pill text-black-950 fs-body-md lh-0"
+                for="paymentPayers" data-bs-toggle="modal" data-bs-target="#paymentPayersModal"><i
+                  class="fi fi-rr-plus"></i></label>
+              <label class="d-block mb-2 fs-caption-md text-black-950" for="split-method">分帳方式<span
+                  class="d-inline-block ms-1" style="color: #D12828;">*</span></label>
+              <input type="checkbox" class="btn-check" id="journeyDate" autocomplete="off">
+              <a href="./split_method1.html"
+                class="d-flex align-items-center mb-4 px-4 py-3 bg-black-50 rounded-120 text-black-300 fs-body-md"
+                for="journeyDate">請選擇<i class="fi fi-rr-angle-small-right ms-auto" style="font-size: 24px;"></i></a>
+            </fieldset>
+          </form>
+        </div>
+        <div class="accounting-addReceipt">
+          <div class="container py-7">
+            <h2 class="mb-3 px-3 fs-title-md fw-semibold text-black-950 mb-4">消費明細</h2>
+            <div class="row row-cols-2 g-3">
+              <div class="col">
+                <button class="btn btn-light border border-black-300 rounded-120 w-100 fs-title-md fw-semibold"><i
+                    class="fi fi-rr-add me-2"></i>新增明細</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-light border border-black-300 rounded-120 w-100 fs-title-md fw-semibold"><i
+                    class="fi fi-rr-qr-scan me-2"></i>掃描明細</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--modal bottom-->
+      <div class="modal fade" id="journeyNameModal" tabindex="-1" aria-labelledby="journeyNameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+          <div class="modal-content border-0 rounded-bottom-0 bg-white ">
+            <div class="modal-header border-0 d-block py-0">
+              <div class="modal-deco-top"></div>
+              <h5 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="journeyNameLabel">選擇旅程</h5>
+            </div>
+            <div class="modal-body py-2 rounded-160">
+              <ul class="list-unstyled d-flex flex-column gap-2 m-0 bg-white rounded-160">
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-3 py-2 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="journeyName-select-1" class="d-flex align-items-center me-auto w-100">
+                      <picture class="d-block me-3 bg-purple-200 travel-img rounded-80"
+                        style="height: 60px; width: 80px;">
+                        <img src="/AAPD-Binky/assets/trip-cover-1-f5eb0a86.png" alt="trip" class="d-block me-3 bg-purple-200 travel-img deco-star-left-sm rounded-80"
+                        style="height: 60px; width: 80px;">
+                      </picture>
+                      <div>
+                        <h3 class="fs-title-lg fw-bold mb-2">東京滑雪團</h3>
+                        <ul class="avatar-list list-unstyled m-0">
+                          <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><span class="avatar-sm avatar-sm-tag rounded-pill text-black-500 bg-transparent">+3</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="journeyName-select" value="journeyName-select-1" id="journeyName-select-1">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="journeyName-select-2" class="d-flex align-items-center me-auto w-100">
+                      <picture class="d-block me-3 bg-purple-200 travel-img deco-star-left-sm rounded-80"
+                        style="height: 60px; width: 80px;">
+
+                      </picture>
+                      <div>
+                        <h3 class="fs-title-lg fw-bold mb-2">台北大縱走</h3>
+                        <ul class="avatar-list list-unstyled m-0">
+                          <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><span class="avatar-sm avatar-sm-tag rounded-pill text-black-500 bg-transparent">+3</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="journeyName-select" value="journeyName-select-2" id="journeyName-select-2">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="journeyName-select-3" class="d-flex align-items-center me-auto w-100">
+                      <picture class="d-block me-3 bg-purple-200 travel-img rounded-80"
+                        style="height: 60px; width: 80px;">
+                        <img src="/AAPD-Binky/assets/trip-cover-2-56ec544f.png" alt="trip" class="d-block me-3 bg-purple-200 travel-img deco-star-left-sm rounded-80"
+                        style="height: 60px; width: 80px;">
+                      </picture>
+                      <div>
+                        <h3 class="fs-title-lg fw-bold mb-2">台南吃吃喝喝</h3>
+                        <ul class="avatar-list list-unstyled m-0">
+                          <li><img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar"
+                              class="avatar-sm rounded-pill border border-1 border-white"></li>
+                          <li><span class="avatar-sm avatar-sm-tag rounded-pill text-black-500 bg-transparent">+3</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="journeyName-select" value="journeyName-select-3" id="journeyName-select-3">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="paymentPayersModal" tabindex="-1" aria-labelledby="paymentPayersLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+          <div class="modal-content border-0 rounded-bottom-0 bg-white ">
+            <div class="modal-header border-0 d-block py-0">
+              <div class="modal-deco-top"></div>
+              <h4 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="paymentPayersLabel">選擇付款人</h4>
+            </div>
+            <div class="modal-body py-2 rounded-160">
+              <ul class="list-unstyled d-flex flex-column gap-3 m-0 bg-white rounded-160">
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" height="40" width="40" class="me-4">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                      <h5 class="fs-title-lg fw-bold">Mia</h5>
+                      <span class="fs-body-md fw-semibold text-black-950"><span class="symbol">$</span> 00.00</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" height="40" width="40" class="me-4">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                      <h5 class="fs-title-lg fw-bold">Amy</h5>
+                      <span class="fs-body-md fw-semibold text-black-950"><span class="symbol">$</span> 00.00</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO+SURBVHgBxZk9UBNBFMf/e0E+mzAjkVgFO2d0gE5sBK20kNFOGr8bG6C0Emf8KA21OkIhdjpYaCXEBscKGC2sTGyMJOMkBRAg5Nb3NrlIksvH7cb4m8nckbtL/nnv7X93HwKaJONy1PJh0LYxSn8OCQG/lPDzNTpP03mMTmO2xLoFRPqCIgINhJebU1Hp3+/GJD005YjxQIyei/gk7vcGRazRhxoSqIR14R6dTqEJ0JfONSq0rsDfCTlJ0ZrRiFg9YlQKM4ePiPlaN9UUmPwln6BJUauKhXBfQExXu+wqsJDSN3Q6itaw1pbBWO+ASJdfsNzuJnHLaJ04ZqgQkAoqBBbSOoTWM5pMqO8uoSTFibi8RoX7Av+RHDDd3y/Czt9Fgam4DO0LldoQNNnZkujs8WStlZDJt21jwKnHYoqzwIyJOOblg4wSaQTZ2X6P8lyFEsjRo9RehQHRLznEvuawsrgHY2xMsZPAEViInhHvn+2o46e3WfMoEnudef9VAil6Z2DA6ocs4t9tdc7ill/twhTLwqQ68qoEBrWXTth497RU0MpiVqXcCKpFtWKyDQyZxT2/u+2a0oWHmWJUdckJDFk+gUFo4IhLJ9zrjUWbihS01hQ0c6zC48zB6XsdzlQVV86F2x0YudgODWIiuSFTaHAp5QwArjGvDJ87hLGJDvQGPBg5mTZHsG4YOE3fPmeVMFMLYaH8Gjjpa+h+Cw2S2pBN8bfMprfP8JRiHhhLC3vK97wSOuHD5ekurRRH4dEHWeDSwm7Dg+T8rU6cHj8EzwisWfR71uARrqGbj7vhrxMNXtncme3RE0fYOfxgo/4IDfwBq6ZIFnfjUTeCxxou80pUBKX3CKJMpNsakL3PSBzUCI5YasdPxQhNWOTYlY6S99iUuQxMoOqOsbb8T7QxCwO4xhxfY8Ej41qzRgkcvcIRaNtBGIY4UTw70e7NSqqQpc4DH5VAtf43jCJH8PipNvUyhVsjwUJb5O+mKd8YisKgxZEiXzSNHtdeTmLMEVgcZhxFmcuHVZdmpJaMeSZ4oKlU4gOBo7QfNUy1CZK+u7yZ5PqTafprdeuDU7sW6BfD5e+7Oik1ci4B+gauQWSLmkduF2q3337KMAq7q38Fp5VKq2qLr+Zc1EcP0nL2Oo8sNBvuY1MfppY4pu5kGQiKOR72JHQeTYKjtkn9l8CBJlE1PPlCnFokPu5C0EZfeN1L83zPwmjWGnBpVFZ/TBPeVPOemjoAgzQEQ/RJoaLJsxhJr/yCM0LrunXdf0P8AQgWhgP3pdSlAAAAAElFTkSuQmCC" alt="avatar" height="40" width="40" class="me-4">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                      <h5 class="fs-title-lg fw-bold">Celeste</h5>
+                      <span class="fs-body-md fw-semibold text-black-950"><span class="symbol">$</span> 00.00</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="currencySwitchModal" tabindex="-1" aria-labelledby="currencySwitchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+          <div class="modal-content border-0 rounded-bottom-0 bg-white ">
+            <div class="modal-header border-0 d-block py-0">
+              <div class="modal-deco-top"></div>
+              <h4 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="currencySwitchModal">選擇幣別</h4>
+            </div>
+            <div class="deco-searchbar d-flex align-items-center mx-4">
+              <input type="text" class="form-control bg-black-50 border-0 py-2 ps-9 me-2 fs-body-md rounded-80"
+                placeholder="搜尋">
+            </div>
+            <div class="modal-body py-2 rounded-160 overscroll-nobar">
+              <span class="d-block mb-2 mt-3 fs-caption-lg fw-semibold">最近使用</span>
+              <ul class="list-unstyled d-flex flex-column gap-3  m-0 mb-4 bg-white rounded-160">
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-1" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">JYP</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">日圓</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-1" id="currency-select-1">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-2" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">TWD</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">新台幣</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-2" id="currency-select-2">
+                  </div>
+                </li>
+              </ul>
+              <span class="mb-2 fs-caption-lg fw-semibold">所有幣別</span>
+              <ul class="list-unstyled d-flex flex-column gap-3 m-0 mb-4 bg-white rounded-160">
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-3" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">AED</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">阿拉伯聯合大公國迪爾汗</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-3" id="currency-select-3">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-4" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">AFN</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">阿富汗尼</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-4" id="currency-select-4">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-5" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">ALL</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">阿爾巴尼亞列克</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-5" id="currency-select-5">
+                  </div>
+                </li>
+                <li class="card rounded-0 bg-white border-0">
+                  <div class="card-body px-4 py-3 rounded-120 d-flex align-items-center bg-black-50 remind-check">
+                    <label for="currency-select-6" class="me-auto w-100 fs-title-md">
+                      <span class="text-black-950 fw-bold">AWD</span><span class="d-inline-block mx-2">-</span><span class="fs-body-md">亞美尼亞德拉姆</span>
+                    </label>
+                    <input class="form-check-input check-input-black-950 m-0" style="width: 24px; height: 24px;"
+                      type="radio" name="currency-select" value="currency-select-6" id="currency-select-6">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottombar">
+  
+</div>      
+</body>
+
+</html>

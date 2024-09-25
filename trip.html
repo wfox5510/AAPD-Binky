@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Trip</title>
+  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-383a5221.js"></script>
+  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-c4670fba.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="trip-title d-flex justify-content-between mb-3 py-3">
+      <span class="material-symbols-outlined">arrow_back_ios</span>
+      <p class="fs-title-lg fw-bold text-black-950">新增旅程</p>
+      <a href="#" class="fs-caption-md text-black-950 fw-medium">確定</a>
+    </div>
+    <div class="trip-banner d-flex flex-column justify-content-end align-items-end bg-purple-300 p-3 mb-3" style="height: 131px;border-radius: 16px 16px 12px 12px;">
+      <button class="btn d-flex btn-white gap-1 justify-content-center align-items-center rounded-pill px-3 py-2 border-none">
+        <span class="material-symbols-outlined" style="font-size: 16px;">photo_camera</span>
+        <p class="fs-caption-md">上傳封面</p>
+      </button>
+    </div>
+    <div class="trip-content" style="border-radius: 32px 32px 0 0;">
+      <div class="mb-4">
+        <label for="tripName" class="form-label mb-2">旅程名稱</label>
+        <input type="text" class="form-control" id="tripName" placeholder="請輸入文字">
+      </div>
+      <label for="tripDay" class="form-label mb-2">旅程天數</label>
+      <div class="input-group mb-4">
+        <input type="text" class="form-control" id="tripDay" placeholder="請選擇">
+        <span class="input-group-text material-symbols-outlined text-black-950">arrow_forward_ios</span>
+      </div>
+      <label class="form-label mb-2">成員</label>
+      <ul class="trip-member nav align-items-center overflow-x-auto gap-2 mb-3">
+        <li class="nav-item" style="flex: 0 0 auto;">
+          <a class="nav-link d-flex align-items-center gap-1 px-3 py-1 bg-black-50 text-black-950 rounded-160" aria-current="page" href="#">
+            <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar1" style="width: 20px;height: 20px;">
+            <p>Mia</p>
+          </a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined bg-black-50 rounded-circle p-2" style="font-size: 16px;">add</span>
+        </li>
+      </ul>
+      <div class="mb-4">
+        <label for="tripGoal" class="form-label">地點</label>
+        <input type="text" class="form-control" id="tripGoal" placeholder="請輸入文字">
+      </div>
+      <label for="tripDate" class="form-label mb-2">日期</label>
+      <div class="input-group mb-4">
+        <input type="text" class="form-control" id="tripDate" placeholder="請選擇">
+        <span class="input-group-text material-symbols-outlined text-black-950">arrow_forward_ios</span>
+      </div>
+      <label for="tripDate" class="form-label">主要幣別</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="tripDate" placeholder="請選擇">
+        <span class="input-group-text material-symbols-outlined text-black-950">arrow_forward_ios</span>
+      </div>
+      <div class="bottom-bar bg-black-950 mx-auto mt-5 mb-2"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

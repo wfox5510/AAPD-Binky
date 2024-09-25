@@ -6,161 +6,142 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>分帳</title>
-  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-606bc614.js"></script>
-  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-f5fa1f70.css">
+  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-383a5221.js"></script>
+  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-c4670fba.css">
 </head>
 
-<body>
+<body class="payment-remind-page">
   <div class="topbar">
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAqCAYAAABWZ768AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKwSURBVHgB7ZrtbdswEIbfBv1fbxB2groTVJ2g6QbqBM4GZieoM4HVCdpOYG2QbGB2gnaDhAfJMHXil5zIAeh7gAMk60hKPN3ppWRAEARBEARBEARBEAShFN5k+i2s1dau+23ir7W2t7lZ4Diui0E+ytn+31tx0CT9sPYYsT2GkzEH28DY1xltlbUda7dDgSh0wXjMsH/WbjAPdWTcVMBW/bnxdkUGzBcsulBtbeM5ThOj8LIoNg6f/FDAqDL8QjjQxQWsRl7Z05h3IrbsHDZIB2yJ8c10P/N5vjp0Qe4Fqohvw3wrvAy1p1+NdMC4z6b/vYiAXQV+r5ztFnE11rD90LNs0ferkIZ81myMFtMw1j5bu0VB+AKm2L5BnAe2/8Xjc3j4051N5WmJOCvnPIy175jGnbWPOM+S49WhTHDLx++E/xLjhzpfM+0n9KmYb+0c00iXxEWg32JLIl9UfkJ4EghftrzD6biT2WBcclMUuSBOwdXYNuCn4Jf/PIi3GErzUElcIS52NNIZFqKIDAuhMF7zUGBqdMKBhMXa8eGyuQr0Se0WmWNqj4+GBCyImxUxu/f4pkSFjy2GN4cPjQsP2FXkGJXFb4irxNbaV4yzJtbGh8JQXExVhRfD28TxBl1QKnRy/RAYY+0njrL5g9PmlDfh7jOyRb7QeI/jFwcDIRtXeJxSbnzCZYrtM8YooiSGMoyeQW6ZaxGmwlDN/YFwdhqkVd8Bnh0q4Ec3wU3guGTYM6kwnpCK+VAG7pC3Xlsjbx2WQkNkfZAGfglP35nogn3rNBXoi2dQ6nVXCI0LD1hMJdLaitSfmw1L+LPDoHszbiDMSmwdRtKc3njTmshEfJrez0T6umNtivrkcU5y/zVFVBiqR4OutOWuuVRvD7jQF7SCIAiCIAiCIAiCIMzME8rFbjMkZ2CxAAAAAElFTkSuQmCC" alt="time" width="54" height="21">
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAKCAYAAAAQP8Y1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGZSURBVHgBtZU9TsNAEIVfUKCBIjTQpDAVFVJEQ4OEIw6Q5Aa+AXACnBMYTgC5AVSUINFQIAElDXGXNg0FooD3tGNiRY7jRcmTvjjenf2ZnfFODX4KSEhejVmSTYc07H1M3sgDSUvGrZNdsgp/fZN38pk11OCnC3ICt8Gdgv4uSeAOoWyOPpzDecmxY/KR36CHNkmT3ME5OlcBiUlk79fkhwwLbBPrE/fkFC6Comtjh7nxwdR4ReyAnOfm8UHrHSJ36CsoV2iLXWG+dHIpaZOe/e9gkp6x9Q1mjFcqKmIR/ietk0Us0E+9wCixZx9+iuCcaJEXFKdmnLMbY3naI1/TzoVw4ZVu4S9tOIJz7MbmSK3tyJ4DlF8qC5Ocy/K/h8WcZgR3aaT2X5GMc/0plq9nMtI3F1hDC4uTyoS+1cTQBZOi3DF9LxvkEv6HLHtlyZrNM1Jj3ToatnDVSavYncFdMkrHdgV7ZZBuzCeyD39tky3ymDWozilick6nrU2H9syKdP49MFJUTy+fy0O1rolJ8feR1lCN/Ktxv6L+aLpBqtMTAAAAAElFTkSuQmCC" alt="phone-status" width="54.33" height="9.24">
-</div>    <section class="mt-11 mb-6">
-      <div class="head-payment-remind mb-6">
-        <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
-        <h2 class="fs-title-lg fw-bold">提醒款項</h2>
-        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
-      </div>
-      <div class="container">
-        <ul class="nav navtab-bar navtab-black nav-pills mb-6 rounded-120 fs-caption-lg" id="remind-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80 active" id="payment-remind-tab" data-bs-toggle="pill"
-              data-bs-target="#payment-remind" type="button" role="tab" aria-controls="payment-remind"
-              aria-selected="true">需收款</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80" id="repayment-remind-tab" data-bs-toggle="pill"
-              data-bs-target="#repayment-remind" type="button" role="tab" aria-controls="repayment-remind"
-              aria-selected="false">需還款</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-80" id="all-payment-history-tab" data-bs-toggle="pill"
-              data-bs-target="#all-payment-history" type="button" role="tab" aria-controls="all-payment-history"
-              aria-selected="false">歷史款項</button>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="remind-list overscroll-nobar">
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="payment-remind" role="tabpanel" aria-labelledby="payment-remind-tab">
-          <div class="container">
-            <ul class="list-unstyled m-0">
-              <li class="card rounded-0 border-0 border-bottom">
-                <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
-                  <label for="payment-remind-1" class="d-flex align-items-center justify-content-between w-100 me-3">
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Elly</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                      <span class="fs-caption-md mb-1">須付款給</span>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                        class="mb-2">
-                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                          class="JPY-symbol">¥</span>6,700</span>
-                    </div>
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
-                    </div>
-                  </label>
-                  <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-1"
-                    id="payment-remind-1">
-                </div>
-                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                  <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
-                </div>
-              </li>
-              <li class="card rounded-0 border-0 border-bottom">
-                <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
-                  <label for="payment-remind-2" class="d-flex align-items-center justify-content-between w-100 me-3">
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Alex</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                      <span class="fs-caption-md mb-1">須付款給</span>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                        class="mb-2">
-                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                          class="JPY-symbol">¥</span>856</span>
-                    </div>
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
-                    </div>
-                  </label>
-                  <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-2"
-                    id="payment-remind-2">
-                </div>
-                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                  <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
-                </div>
-              </li>
-              <li class="card rounded-0 border-0 border-bottom">
-                <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
-                  <label for="payment-remind-3" class="d-flex align-items-center justify-content-between w-100 me-3">
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-4-cdf17fae.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mitty</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                      <span class="fs-caption-md mb-1">須付款給</span>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                        class="mb-2">
-                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                          class="JPY-symbol">¥</span>2,432</span>
-                    </div>
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
-                    </div>
-                  </label>
-                  <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-3"
-                    id="payment-remind-3">
-                </div>
-                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                  <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
-                </div>
-              </li>
-              <li class="card rounded-0 border-0 border-bottom">
-                <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
-                  <label for="payment-remind-4" class="d-flex align-items-center justify-content-between w-100 me-3">
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Felix</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                      <span class="fs-caption-md mb-1">須付款給</span>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                        class="mb-2">
-                      <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                          class="JPY-symbol">¥</span>3,651</span>
-                    </div>
-                    <div class="py-2 px-3">
-                      <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
-                      <span class="d-block text-center fs-body-md text-black-950">Mia</span>
-                    </div>
-                  </label>
-                  <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-4"
-                    id="payment-remind-4">
-                </div>
-                <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                  <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
-                </div>
-              </li>
-            </ul>
+</div>  <section class="mt-11">
+    <div class="head-payment-remind mb-6">
+      <a href="./split.html" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+      <h2 class="fs-title-lg fw-bold">提醒款項</h2>
+      <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+    </div>
+    <div class="container">
+      <ul class="nav navtab-bar navtab-black nav-pills mb-4 rounded-120 fs-caption-lg" id="remind-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80 active" id="payment-remind-tab" data-bs-toggle="pill" data-bs-target="#payment-remind" type="button" role="tab" aria-controls="payment-remind" aria-selected="true">需收款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="repayment-remind-tab" data-bs-toggle="pill" data-bs-target="#repayment-remind" type="button" role="tab" aria-controls="repayment-remind" aria-selected="false">需還款</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-80" id="all-payment-history-tab" data-bs-toggle="pill" data-bs-target="#all-payment-history" type="button" role="tab" aria-controls="all-payment-history" aria-selected="false">歷史款項</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="remind-list overscroll-nobar">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="payment-remind" role="tabpanel" aria-labelledby="payment-remind-tab">
+        <div class="container">
+          <div class="d-flex mb-2">
+            <a href="##" class="d-block ms-auto p-1 fs-caption-md text-black-500">清除款項</a>
           </div>
+          <ul class="list-unstyled m-0">
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-1" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Elly</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-1" id="payment-remind-1">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-2" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-3-be96ba6d.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Alex</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-2" id="payment-remind-2">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-3" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-4-cdf17fae.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mitty</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-3" id="payment-remind-3">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+            <li class="card rounded-0 border-0 border-bottom">
+              <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
+                <label for="payment-remind-4" class="d-flex align-items-center justify-content-between w-100 me-3">
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-5-3c4b99a3.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Felix</span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-caption-md mb-1">須付款給</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
+                  </div>
+                  <div class="py-2 px-3">
+                    <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
+                    <span class="d-block text-center fs-body-md text-black-950">Mia</span>
+                  </div>
+                </label>
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-4" id="payment-remind-4">
+              </div>
+              <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="tab-pane fade" id="repayment-remind" role="tabpanel" aria-labelledby="repayment-remind-tab">
+      </div>
+      <div class="tab-pane fade" id="repayment-remind" role="tabpanel" aria-labelledby="repayment-remind-tab">
+        <div class="container">
+          <div class="d-flex mb-2">
+            <a href="##" class="d-block ms-auto p-1 fs-caption-md text-black-500">清除款項</a>
+          </div>
           <ul class="list-unstyled m-0">
             <li class="card rounded-0 border-0 border-bottom">
               <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
@@ -171,23 +152,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>6,700</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-5"
-                  id="payment-remind-5">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-5" id="payment-remind-5">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -199,23 +175,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>856</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-6"
-                  id="payment-remind-6">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-6" id="payment-remind-6">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -227,23 +198,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>2,432</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-7"
-                  id="payment-remind-7">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-7" id="payment-remind-7">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -255,28 +221,28 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>3,651</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-8"
-                  id="payment-remind-8">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-8" id="payment-remind-8">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
           </ul>
         </div>
-        <div class="tab-pane fade" id="all-payment-history" role="tabpanel" aria-labelledby="all-payment-history-tab">
+      </div>
+      <div class="tab-pane fade" id="all-payment-history" role="tabpanel" aria-labelledby="all-payment-history-tab">
+        <div class="container">
+          <div class="d-flex mb-2">
+            <a href="##" class="d-block ms-auto p-1 fs-caption-md text-black-500">清除款項</a>
+          </div>
           <ul class="list-unstyled m-0">
             <li class="card rounded-0 border-0 border-bottom">
               <div class="card-body rounded-160 d-flex align-items-center bg-white remind-check">
@@ -287,23 +253,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>6,700</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>6,700</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-9"
-                  id="payment-remind-9">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-9" id="payment-remind-9">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -315,23 +276,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>856</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>856</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-10"
-                  id="payment-remind-10">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-10" id="payment-remind-10">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -343,23 +299,18 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>2,432</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>2,432</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-11"
-                  id="payment-remind-11">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-11" id="payment-remind-11">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
             <li class="card rounded-0 border-0 border-bottom">
@@ -371,152 +322,141 @@
                   </div>
                   <div class="d-flex flex-column align-items-center">
                     <span class="fs-caption-md mb-1">須付款給</span>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto"
-                      class="mb-2">
-                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span
-                        class="JPY-symbol">¥</span>3,651</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAAfCAYAAADKkAAxAAAAAXNSR0IArs4c6QAAAZtJREFUeAHt3eFNwzAQBtCMwEiMwAawCYzCBmdPwCiMwAigIAwRREKKfLFbPSQU/nC+vvMHapvKy+KLAAECBAgQOFcgIm5qrY+llJeIuDt3dasRIJAqEBHPpZT39l1rvU9dUHECBM4TKKVEC3e7Cvl5/lYikCoQEbct2NurkKeyK07gPIGIeNiGu/0s5OfNwEoEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF5AyMfPQAcEUgWEPJVXcQLjBYR8/Ax0QCBVQMhTeRUnMF7g35C3N85df+75ZcHiGvbA580w1/BAPAaBtAd298DbAmYX5vsTPHz4XPAeeBXwzcfxLniQ/iCZ4589sD4/H/8qgQ4IEDgssD7P3vvHJNyHSf0igTkEhHuOOeiCQHcB4e5OqiCBOQSEe4456IJAdwHh7k6qIIE5BIR7jjnogkB3AeHuTqoggTkEhHuOOeiCQHcB4e5OqiCBOQTW00zcxDLHLHRBoLvAemTR74C7Q607s4IExghExNM24MI9Zg5WJZAisB4++HU+WaynnBxZ5APumr+RpZ4xawAAAA5lWElmTU0AKgAAAAgAAAAAAAAA0lOTAAAAAElFTkSuQmCC" alt="arrow-right" width="123px" height="auto" class="mb-2">
+                    <span class="bg-green-300 py-1 px-3 rounded-pill fs-caption-lg fw-semibold text-black-950"><span class="JPY-symbol">¥</span>3,651</span>
                   </div>
                   <div class="py-2 px-3">
                     <img src="/AAPD-Binky/assets/avatar-1-da152b9d.png" alt="avatar" class="avatar d-block mb-1">
                     <span class="d-block text-center fs-body-md text-black-950">Mia</span>
                   </div>
                 </label>
-                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-12"
-                  id="payment-remind-12">
+                <input class="form-check-input check-input-black-950 m-0 p-3" type="checkbox" value="payment-remind-12" id="payment-remind-12">
               </div>
               <div class="card-footer d-flex justify-content-end bg-black-50 border-0 p-0 pt-1 pb-2">
-                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i
-                      class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
+                <a href="./index.html" class="details-link fs-caption-md text-black-950" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-detail" aria-controls="offcanvas-detail">看明細 <i class="fi fi-rr-angle-small-right ms-1 fs-body-lg"></i></a>
               </div>
             </li>
           </ul>
         </div>
       </div>
-    </section>
-    <section class="mt-4">
-      <div class="container">
-        <div class="d-flex gap-2">
-          <button type="button"
-            class="btn btn-lg btn-outline-black-300 w-50 rounded-160 fs-title-lg fw-bold text-black-950 lh-sm">已完成付款</button>
-          <button type="button"
-            class="btn btn-lg btn-black-950 w-50 rounded-160 fs-title-lg fw-bold text-white lh-sm" data-bs-toggle="modal" data-bs-target="#sendRemindModal">提醒款項</button>
-        </div>
-      </div>
-      <!-- Modal -->
-      <div class="modal fade" id="sendRemindModal" tabindex="-1" aria-labelledby="sendRemindModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-bottom m-0 w-100">
-          <div class="modal-content border-0 rounded-bottom-0 bg-black-50 ">
-            <div class="modal-header d-block py-0">
-              <div class="modal-deco-top"></div>
-              <h5 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="sendRemindModalLabel">分享方式</h5>
-            </div>
-            <div class="modal-body py-2 rounded-160">
-              <ul class="remind-method-list remind-method-list-black list-unstyled m-0 bg-white rounded-160">
-                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">發送網址連結 (免下載APP)<i class="fi fi-rr-link ms-auto fs-h4"></i></a></li>
-                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">存成圖片<i class="fi fi-rr-picture ms-auto fs-h4"></i></a></li>
-                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">複製文字內容<i class="fi fi-rr-duplicate ms-auto fs-h4"></i></a></li>
-                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">掃描 QR Code<i class="fi fi-rr-qr-scan ms-auto fs-h4"></i></a></li>
-                <li class="px-4"><a href="##" class="d-flex align-items-center w-100 fs-body-md">透過電子郵件傳送<i class="fi fi-rr-envelope ms-auto fs-h4"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="offcanvas offcanvas-end offcanvas-detail bg-white" tabindex="-1" id="offcanvas-detail"
-      data-bs-backdrop="false" aria-labelledby="offcanvas-detailLabel">
-      <div class="offcanvas-header head-payment-remind">
-        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close" class="d-block p-2 me-11"><i
-            class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
-        <h2 class="fs-title-lg fw-bold">提醒款項</h2>
-        <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
-      </div>
-      <div class="offcanvas-body overscroll-nobar text-center py-0">
-        <section class="pt-8 pb-8">
-          <h3 class="fs-h4 mb-6 fw-bold">Elly, 提醒你要付款給Mia囉!</h3>
-          <h4 class="fs-title-md fw-semibold mb-1">東京滑雪團</h4>
-          <span class="d-block fs-caption-md mb-6">2024/12/01 - 2024/12/06</span>
-          <div class="d-flex align-items-center px-4 py-3 mb-4 rounded-120 bg-purple-200">
-            <span class="fs-h4 fw-bold me-auto text-dark">合計</span>
-            <span class="fs-h3 fw-bold text-black-950">
-              <span class="negative-symbol">-</span><span class="JPY-symbol">¥</span>6,700
-            </span>
-          </div>
-          <div class="p-4 mb-6 rounded-120 bg-purple-100 text-start text-black-950">
-            <h5 class="fs-body-md fw-normal mb-2">我的帳戶</h5>
-            <ul class="list-unstyled list-seperate d-flex align-items-center mb-1 fs-caption-md lh-sm">
-              <li>台新銀行 (812)</li>
-              <li>敦南分行 (0023)</li>
-            </ul>
-            <div class="d-flex align-items-center">
-              <span class="d-block fs-caption-md me-1">2777-14-2345678-0</span>
-              <a href="##" class="bankid-copy d-block text-black-950"><i
-                  class="fi fi-rr-duplicate d-block fs-caption-md"></i></a>
-            </div>
-          </div>
-          <span class="fs-body-lg text-black-950">請在<span
-              class="fs-title-lg fw-semibold d-inline-block px-1">2024/12/20</span>之前匯款, 謝謝</span>
-        </section>
-        <section class="py-6 text-start border-top-dashed border-purple-700">
-          <h3 class="fs-title-lg fw-semibold py-1 mb-3">消費明細</h3>
-          <ul class="list-unstyled d-flex flex-column gap-3 mb-6">
-            <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
-              <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
-                <li>
-                  <h4 class="fs-caption-lg fw-normal">WゲームワイドストレートカーゴP</h4>
-                </li>
-                <li>數量：1</li>
-                <li>分類：服飾</li>
-                <li>分帳方式：按調整</li>
-              </ul>
-              <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>1,900</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
-              <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
-                <li>
-                  <h4 class="fs-caption-lg fw-normal">GスフレヤーンVネックカーディガン</h4>
-                </li>
-                <li>數量：1</li>
-                <li>分類：服飾</li>
-                <li>分帳方式：按調整</li>
-              </ul>
-              <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>1,900</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
-              <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
-                <li>
-                  <h4 class="fs-caption-lg fw-normal">W3DAZLP-ZAD-I</h4>
-                </li>
-                <li>數量：1</li>
-                <li>分類：服飾</li>
-                <li>分帳方式：按調整</li>
-              </ul>
-              <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>2,900</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
-              <h4 class="fs-caption-lg fw-normal">內消費稅 10.00%</h4>
-              <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>633</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
-              <h4 class="fs-caption-lg fw-normal">免稅額</h4>
-              <span class="fs-title-lg fw-bold text-black-950"><span class="negative-symbol">-</span><span
-                  class="JPY-symbol">¥</span>633</span>
-            </li>
-          </ul>
-          <p class="fs-caption-lg text-center mb-6 text-black-950">
-            我們的帳單正在經歷一次漫長的旅程<br>
-            它的終點站是完成付款<br>
-            只差你的一點幫助就能讓它完成這次壯麗的旅行
-          </p>
-          <button type="button" class="btn btn-lg btn-black-950 fs-title-lg rounded-160 w-100" data-bs-toggle="modal" data-bs-target="#sendRemindModal">提醒款項</button>
-        </section>
+    </div>
+  </section>
+  <section class="mt-4">
+    <div class="container">
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-lg btn-outline-black-300 w-50 rounded-160 fs-title-lg fw-bold text-black-950 lh-sm">已完成付款</button>
+        <button type="button" class="btn btn-lg btn-black-950 w-50 rounded-160 fs-title-lg fw-bold text-white lh-sm" data-bs-toggle="modal" data-bs-target="#sendRemindModal">提醒款項</button>
       </div>
     </div>
-    <div class="bottombar">
+    <!-- Modal -->
+    <div class="modal fade" id="sendRemindModal" tabindex="-1" aria-labelledby="sendRemindModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-bottom m-0 w-100">
+        <div class="modal-content border-0 rounded-bottom-0 bg-black-50 ">
+          <div class="modal-header d-block py-0">
+            <div class="modal-deco-top"></div>
+            <h5 class="modal-title py-1 mt-2 fs-title-lg fw-semibold" id="sendRemindModalLabel">分享方式</h5>
+          </div>
+          <div class="modal-body py-2 rounded-160">
+            <ul class="remind-method-list remind-method-list-black list-unstyled m-0 bg-white rounded-160">
+              <li><a href="##" class="d-flex px-4 align-items-center w-100 h-100 fs-body-md">發送網址連結 (免下載APP)<i class="fi fi-rr-link ms-auto fs-h4"></i></a></li>
+              <li><a href="##" class="d-flex px-4 align-items-center w-100 h-100 fs-body-md">存成圖片<i class="fi fi-rr-picture ms-auto fs-h4"></i></a></li>
+              <li><a href="##" class="d-flex px-4 align-items-center w-100 h-100 fs-body-md">複製文字內容<i class="fi fi-rr-duplicate ms-auto fs-h4"></i></a></li>
+              <li><a href="##" class="d-flex px-4 align-items-center w-100 h-100 fs-body-md">掃描 QR Code<i class="fi fi-rr-qr-scan ms-auto fs-h4"></i></a></li>
+              <li><a href="##" class="d-flex px-4 align-items-center w-100 h-100 fs-body-md">透過電子郵件傳送<i class="fi fi-rr-envelope ms-auto fs-h4"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="offcanvas offcanvas-end offcanvas-detail bg-white" tabindex="-1" id="offcanvas-detail" data-bs-backdrop="false" aria-labelledby="offcanvas-detailLabel">
+    <div class="offcanvas-header head-payment-remind">
+      <a href="#" data-bs-dismiss="offcanvas" aria-label="Close" class="d-block p-2 me-11"><i class="fi fi-rr-angle-left text-black-950 d-block"></i></a>
+      <h2 class="fs-title-lg fw-bold">提醒款項</h2>
+      <a href="#" class="py-2 px-3 fs-caption-lg text-black-950 fw-medium">切換幣別</a>
+    </div>
+    <div class="offcanvas-body overscroll-nobar text-center py-0">
+      <section class="pt-8 pb-8">
+        <h3 class="fs-h4 mb-6 fw-bold">Elly, 提醒你要付款給Mia囉!</h3>
+        <h4 class="fs-title-md fw-semibold mb-1">東京滑雪團</h4>
+        <span class="d-block fs-caption-md mb-6">2024/12/01 - 2024/12/06</span>
+        <div class="d-flex align-items-center px-4 py-3 mb-4 rounded-120 bg-purple-200">
+          <span class="fs-h4 fw-bold me-auto text-dark">合計</span>
+          <span class="fs-h3 fw-bold text-black-950">
+            <span class="negative-symbol">-</span><span class="JPY-symbol">¥</span>6,700
+          </span>
+        </div>
+        <div class="p-4 mb-6 rounded-120 bg-purple-100 text-start text-black-950">
+          <h5 class="fs-body-md fw-normal mb-2">我的帳戶</h5>
+          <ul class="list-unstyled list-seperate d-flex align-items-center mb-1 fs-caption-md lh-sm">
+            <li>台新銀行 (812)</li>
+            <li>敦南分行 (0023)</li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <span class="d-block fs-caption-md me-1">2777-14-2345678-0</span>
+            <a href="##" class="bankid-copy d-block text-black-950"><i class="fi fi-rr-duplicate d-block fs-caption-md"></i></a>
+          </div>
+        </div>
+        <span class="fs-body-lg text-black-950">請在<span class="fs-title-lg fw-semibold d-inline-block px-1">2024/12/20</span>之前匯款, 謝謝</span>
+      </section>
+      <section class="py-6 text-start border-top-dashed border-purple-700">
+        <h3 class="fs-title-lg fw-semibold py-1 mb-3">消費明細</h3>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-6">
+          <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
+            <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
+              <li>
+                <h4 class="fs-caption-lg fw-normal">WゲームワイドストレートカーゴP</h4>
+              </li>
+              <li>數量：1</li>
+              <li>分類：服飾</li>
+              <li>分帳方式：按調整</li>
+            </ul>
+            <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>1,900</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
+            <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
+              <li>
+                <h4 class="fs-caption-lg fw-normal">GスフレヤーンVネックカーディガン</h4>
+              </li>
+              <li>數量：1</li>
+              <li>分類：服飾</li>
+              <li>分帳方式：按調整</li>
+            </ul>
+            <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>1,900</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
+            <ul class="list-unstyled m-0 fs-caption-md d-flex flex-column gap-1">
+              <li>
+                <h4 class="fs-caption-lg fw-normal">W3DAZLP-ZAD-I</h4>
+              </li>
+              <li>數量：1</li>
+              <li>分類：服飾</li>
+              <li>分帳方式：按調整</li>
+            </ul>
+            <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>2,900</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
+            <h4 class="fs-caption-lg fw-normal">內消費稅 10.00%</h4>
+            <span class="fs-title-lg fw-bold text-black-950"><span class="JPY-symbol">¥</span>633</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center p-3 rounded-120 bg-black-50">
+            <h4 class="fs-caption-lg fw-normal">免稅額</h4>
+            <span class="fs-title-lg fw-bold text-black-950"><span class="negative-symbol">-</span><span class="JPY-symbol">¥</span>633</span>
+          </li>
+        </ul>
+        <p class="fs-caption-lg text-center mb-6 text-black-950">
+          我們的帳單正在經歷一次漫長的旅程<br>
+          它的終點站是完成付款<br>
+          只差你的一點幫助就能讓它完成這次壯麗的旅行
+        </p>
+        <button type="button" class="btn btn-lg btn-black-950 fs-title-lg rounded-160 w-100" data-bs-toggle="modal" data-bs-target="#sendRemindModal">提醒款項</button>
+      </section>
+    </div>
+  </div>
+  <div class="bottombar">
   
-</div>      
+</div>  
 </body>
 
 </html>

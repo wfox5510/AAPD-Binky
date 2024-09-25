@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Split_method</title>
+  <script type="module" crossorigin src="/AAPD-Binky/assets/bootstrap.min-383a5221.js"></script>
+  <link rel="stylesheet" href="/AAPD-Binky/assets/bootstrap-c4670fba.css">
+</head>
+<body>
+    <div class="container pt-4 d-flex flex-column">
+        <div class="bar bg-black-200 mx-auto"></div>
+        <div class="title-info d-flex justify-content-center align-items-center gap-3">
+            <img src="/AAPD-Binky/assets/eat_drink-c3cbe34b.svg" alt="eat-drink">
+            <div class="d-flex align-items-center gap-1 text-black-950">
+                <p class="fs-display-md fw-bold">¥</p>
+                <p class="fs-display-md fw-bold">14,300</p>
+            </div>
+        </div>
+
+        <!--方法 start-->
+        <div class="tab-content mt-5" id="myTabContent">
+            <div class="tab-pane fade show active" id="percentage" role="tabpanel" aria-labelledby="percentage-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/AAPD-Binky/assets/percentage-fcf53019.svg" alt="percentage" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text percentage">按比例</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人的比例分配總金額</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="adjust" role="tabpanel" aria-labelledby="adjust-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/AAPD-Binky/assets/layout-fluid-973beff7.svg" alt="layout" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text adjust">按調整</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">扣除每個人的開支後，剩下的金額平均分配</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="price" role="tabpanel" aria-labelledby="price-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/AAPD-Binky/assets/stats-983d7925.svg" alt="stats" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text">按金額</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人的確切金額分配總金額</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="number" role="tabpanel" aria-labelledby="number-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/AAPD-Binky/assets/cupcake-ecc3f9a3.svg" alt="cupcake" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text">按份數</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人所分配的份數分配總金額</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--方法 end-->
+
+        <!--menu start-->
+        <ul class="nav nav-tabs menu d-flex justify-content-between bg-black-50 mt-4 rounded-120" id="myTab" role="tablist">
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100 active" id="percentage-tab" data-bs-toggle="tab" data-bs-target="#percentage" type="button" role="tab" aria-controls="percentage" aria-selected="true">
+                    <img src="/AAPD-Binky/assets/percentage-fcf53019.svg" alt="percentage" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="adjust-tab" data-bs-toggle="tab" data-bs-target="#adjust" type="button" role="tab" aria-controls="adjust" aria-selected="false">
+                    <img src="/AAPD-Binky/assets/layout-fluid-973beff7.svg" alt="layout" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="price-tab" data-bs-toggle="tab" data-bs-target="#price" type="button" role="tab" aria-controls="price" aria-selected="false">
+                    <img src="/AAPD-Binky/assets/stats-983d7925.svg" alt="stats" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="number-tab" data-bs-toggle="tab" data-bs-target="#number" type="button" role="tab" aria-controls="number" aria-selected="false">
+                    <img src="/AAPD-Binky/assets/cupcake-ecc3f9a3.svg" alt="cupcake" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+        </ul>
+        <!--menu end-->
+        
+        <!--內容 start-->
+        <div class="container mt-5">
+    <div class="content overflow-auto">
+        <div class="bg-black-50 mb-3">
+            <div class="item d-flex justify-content-between p-4" data-bs-toggle="modal" data-bs-target="#keyboard">
+                <div class="person d-flex align-items-center gap-4">
+                    <img src="/AAPD-Binky/assets/avatar-2-363d69d3.png" alt="avatar-1" width="40" height="40">
+                    <p class="fz-title-lg text-black-950">Elly</p>
+                </div>
+                <div class="percent">
+                    <p class="fz-title-md">20.0%</p>
+                    <p class="d-flex gap-1 fz-caption-md"><span>=</span><span>¥</span><span>2383.3</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black-50 mb-3">
+            <div class="item d-flex justify-content-between p-4" data-bs-toggle="modal" data-bs-target="#keyboard">
+                <div class="person d-flex align-items-center gap-4">
+                    <img src="/AAPD-Binky/assets/avatar-4-cdf17fae.png" alt="avatar-1" width="40" height="40">
+                    <p class="fz-title-lg text-black-950">Mitty</p>
+                </div>
+                <div class="percent">
+                    <p class="fz-title-md">20.0%</p>
+                    <p class="d-flex gap-1 fz-caption-md"><span>=</span><span>¥</span><span>2383.3</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black-50 mb-3">
+            <div class="item d-flex justify-content-between p-4" data-bs-toggle="modal" data-bs-target="#keyboard">
+                <div class="person d-flex align-items-center gap-4">
+                    <img src="data:image/png;base64,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" alt="avatar-1" width="40" height="40">
+                    <p class="fz-title-lg text-black-950">Lilian</p>
+                </div>
+                <div class="percent">
+                    <p class="fz-title-md">20.0%</p>
+                    <p class="d-flex gap-1 fz-caption-md"><span>=</span><span>¥</span><span>2383.3</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black-50 mb-3">
+            <div class="item d-flex justify-content-between p-4" data-bs-toggle="modal" data-bs-target="#keyboard">
+                <div class="person d-flex align-items-center gap-4">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOaSURBVHgBxZnLT1NBFMa/uUBUfASjJUBctCsTEwUjC+PGsmHBwsREE5fIwm3hHxBwbWL9BxB3JpKYuDDqhrIxLjSpmpC4ak2MRQqB+H60vZ7v3t5Ky+1jZmr9Je1cmDv3fpwzc+bMQcGQfM6NQ2FELs8rSKvQ57roY59S2JbrrFxmSy5elYDU4KBKwQClc3Mm4/Yd6EVCBk0HYjRelJWv1O8S5kVsVmNci8L2YxYlTKMNiIUXWxXaVODmupsQa83pWqyFF9P98/2DarHJffXJr7u32mW1ujhIRvrVTL3uUIGeS/fhgVzG0RnS3d8xdjimtms7nLC7RdwyOieOjBR8g+xil0DPrfDCR6eJl99dRZWL13PupKywO/iPFIGZgQGVDH6uCMzl3GiPwrILRGHIz0/AnkOwQ4J89zfEgvlYcXGPg1kbceTJNV+kFRLOCoy5ZTyBtJ7EuUlY8OG5/3mzAHsktG1JJEEgkNaDJc9u+O3rhTZYUfi114+/votdu5DydgnYWC0/WMS9TMIax0GCrSpnJcsw5PN7YGlit9Uu3AOGzsKKgosxp2QRkCnu4ZVwlz6WBbO5Cisk5I04jsIwDAjEsQ2DrrYVqUqIcw5GoQlXayNxAey/P+EvHBO6HAyr/Ed3Cy2mUnTli6RZKDl+CRiVdXnwmMYgCdoqvyYRsAl0U+apL8w2hFAoP60uIActQne1I77pPkPLxRRJFzPu6UKLjd00cPHGmpvR3YMpkEKbLZKAc9eBU1PQRyHtiLg0NOEcYiBuZg1mNpcfGYoTSkW84xxcgQEU10gkxbH/yAmYQwvK/NO2YEAgMiwHpFutxIFJDVJOhCd+mYwwhCLP1Jz7Tk7508AGmXpZViOcstTbsIBzLIhrFGw653YiW3DKa/nV/QPWCdLo9N9WK5TUgZUHtp5A5v9yOLGyIi0YG5d4NQ5rWBoJyiKVQxNT7EIvMrAocTAu2lqPc68oeWAgsLLVeaeoom9WU9rhWlFYVVSq2osjQypp62obXFmstcWk0NqMZDidLn3Qten+AXW69veh2YwUci4C5gHcgNRXKR6FdTQsv0kikZS/LIF/iOfWIVW3xNcwHzw6oFjqvcqVhXbj714zjcSRpgkrJy2XvQi9izZBq32R+ktkR5GoHlpFdJZIuoA5GcXKflRnrGcxCpNdKxZSqKw/zBAe+Hmm5slLrBuVJ0UrQZ6ZsCuCJF2SvhVmTBHDf0P8AZAkVxyRDgNDAAAAAElFTkSuQmCC" alt="avatar-1" width="40" height="40">
+                    <p class="fz-title-lg text-black-950">Alex</p>
+                </div>
+                <div class="percent">
+                    <p class="fz-title-md">20.0%</p>
+                    <p class="d-flex gap-1 fz-caption-md"><span>=</span><span>¥</span><span>2383.3</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <!--內容 end-->
+
+        <!--數字鍵盤Modal start-->
+        <div class="modal number-modal fade mt-auto" id="keyboard" tabindex="-1" aria-labelledby="numberDisplay" aria-hidden="true">
+            <div class="modal-dialog number-modal-dialog">
+                <div class="modal-content number-modal-content bg-black-950">
+                    <div class="modal-header number-modal-header justify-content-between">
+                        <h5 class="numberDisplay" id="numberDisplay"></h5>
+                        <div class="d-flex gap-3 align-items-center">
+                            <button class="p-0 rounded-pill">
+                                <img src="/assets/img/icon/small.png" alt="mic" style="width: 32px;height: 32px;">
+                            </button>
+                            <button type="button" class="rounded-circle d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close" style="width: 32px;height: 32px; border: none;">
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-2">
+                            <div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">7</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">8</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">9</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">÷</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">4</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">5</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">6</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">x</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">1</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">2</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">3</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">-</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white">.</button>
+                                    <button class="keyboard bg-black-700 text-white">0</button>
+                                    <button class="keyboard bg-black-700 text-white">00</button>
+                                    <button class="keyboard bg-black-700 text-white">+</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <button class="keyboard bg-black-700 text-white mb-2">AC</button>
+                                <button class="keyboard bg-black-700 text-white mb-2"><span class="material-symbols-outlined">backspace</span></button>
+                                <button class="keyboardOK bg-purple-300 text-black-950">OK</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer number-modal-footer">
+                        <div class="bottom-bar bg-black-700 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--數字鍵盤Modal end-->
+        <div class="btn check btn-black-950 text-white rounded-160 w-100">確定</div>
+        <div class="bottom-bar bg-black-950 mx-auto mt-5 mb-2"></div>
+    </div>
+
+    
+    <script>
+        const interval = setInterval(() => {
+            const adjust = document.getElementById('adjust-tab');
+            const itemContent = document.querySelectorAll('.item');
+            itemContent.forEach(item => {
+                if(adjust.classList.contains('active')){
+                    item.removeAttribute('data-bs-toggle');
+                    item.addEventListener('click', function() {
+                        window.location.href = 'content.html';
+                    })
+                }
+                else{
+                    item.setAttribute('data-bs-toggle', 'modal');
+                }
+            })
+        },1000)
+    </script>
+    
+</body>
+</html>
