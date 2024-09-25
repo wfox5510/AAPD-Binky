@@ -1,0 +1,83 @@
+.Split_method_page {
+    .container {
+        background-color: #ffffff;
+    }
+
+    .modal-backdrop {
+        background-color: transparent;
+    }
+}
+
+.bar {
+    width: 36px;
+    height: 4px;
+}
+
+.bottom-bar {
+    width: 134px;
+    height: 5px;
+}
+
+.number-modal-dialog {
+    position: absolute;
+    bottom: 0;
+    margin: var(--bs-modal-margin);
+    height: auto;
+}
+
+.number-modal {
+    --bs-modal-margin: 0;
+}
+
+.number-modal-content {
+    border-radius: 32px 32px 0 0;
+}
+
+.number-modal-header {
+    border-bottom: none;
+    padding: 20px 16px;
+}
+
+.number-modal-footer {
+    border-top: none;
+}
+
+.number-modal.fade .number-modal-dialog {
+    transform: translate(0);
+}
+
+
+.keyboard,
+.keyboardOK {
+    width: 62.5px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 0;
+}
+
+.keyboardOK {
+    height: 104px;
+}
+
+.menu {
+    .menu-item.active {
+        background-color: #303030;
+
+        img {
+            filter: invert(100%);
+        }
+    }
+
+    .menu-item:hover {
+        background-color: #303030;
+
+        img {
+            filter: invert(100%);
+        }
+    }
+}
+
+.check {
+    bottom: calc(0% + 29px);
+}

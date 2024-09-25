@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Split_method</title>
+</head>
+<body>
+    <div class="container pt-4 d-flex flex-column">
+        <div class="bar bg-black-200 mx-auto"></div>
+        <div class="title-info d-flex justify-content-center align-items-center gap-3">
+            <img src="/assets/img/icon/category/eat&drink.svg" alt="eat-drink">
+            <div class="d-flex align-items-center gap-1 text-black-950">
+                <p class="fs-display-md fw-bold">¥</p>
+                <p class="fs-display-md fw-bold">14,300</p>
+            </div>
+        </div>
+
+        <!--方法 start-->
+        <div class="tab-content mt-5" id="myTabContent">
+            <div class="tab-pane fade show active" id="percentage" role="tabpanel" aria-labelledby="percentage-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/assets/img/icon/percentage.svg" alt="percentage" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text percentage">按比例</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人的比例分配總金額</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="adjust" role="tabpanel" aria-labelledby="adjust-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/assets/img/icon/layout-fluid.svg" alt="layout" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text adjust">按調整</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">扣除每個人的開支後，剩下的金額平均分配</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="price" role="tabpanel" aria-labelledby="price-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/assets/img/icon/stats.svg" alt="stats" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text">按金額</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人的確切金額分配總金額</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="number" role="tabpanel" aria-labelledby="number-tab">
+                <div class="method d-flex flex-column align-items-center bg-purple-100 rounded-160 px-6 py-4">
+                    <div class="method-choice d-flex align-items-center gap-1 tab">
+                        <img src="/assets/img/icon/cupcake.svg" alt="cupcake" style="width: 16px;height: 16px;">
+                        <p class="fs-title-lg fw-bold method-text">按份數</p>
+                    </div>
+                    <div class="method-info">
+                        <p class="fs-caption-md">根據個人所分配的份數分配總金額</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--方法 end-->
+
+        <!--menu start-->
+        <ul class="nav nav-tabs menu d-flex justify-content-between bg-black-50 mt-4 rounded-120" id="myTab" role="tablist">
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100 active" id="percentage-tab" data-bs-toggle="tab" data-bs-target="#percentage" type="button" role="tab" aria-controls="percentage" aria-selected="true">
+                    <img src="/assets/img/icon/percentage.svg" alt="percentage" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="adjust-tab" data-bs-toggle="tab" data-bs-target="#adjust" type="button" role="tab" aria-controls="adjust" aria-selected="false">
+                    <img src="/assets/img/icon/layout-fluid.svg" alt="layout" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="price-tab" data-bs-toggle="tab" data-bs-target="#price" type="button" role="tab" aria-controls="price" aria-selected="false">
+                    <img src="/assets/img/icon/stats.svg" alt="stats" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+            <li class="nav-item w-25" role="presentation">
+                <button class="nav-link menu-item px-8 py-2 mx-auto w-100" id="number-tab" data-bs-toggle="tab" data-bs-target="#number" type="button" role="tab" aria-controls="number" aria-selected="false">
+                    <img src="/assets/img/icon/cupcake.svg" alt="cupcake" style="width: 16px;height: 16px;">
+                </button>
+            </li>
+        </ul>
+        <!--menu end-->
+        
+        <!--內容 start-->
+        <%- include('./layout/content'); -%>
+        <!--內容 end-->
+
+        <!--數字鍵盤Modal start-->
+        <div class="modal number-modal fade mt-auto" id="keyboard" tabindex="-1" aria-labelledby="numberDisplay" aria-hidden="true">
+            <div class="modal-dialog number-modal-dialog">
+                <div class="modal-content number-modal-content bg-black-950">
+                    <div class="modal-header number-modal-header justify-content-between">
+                        <h5 class="numberDisplay" id="numberDisplay"></h5>
+                        <div class="d-flex gap-3 align-items-center">
+                            <button class="p-0 rounded-pill">
+                                <img src="/assets/img/icon/small.png" alt="mic" style="width: 32px;height: 32px;">
+                            </button>
+                            <button type="button" class="rounded-circle d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close" style="width: 32px;height: 32px; border: none;">
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-2">
+                            <div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">7</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">8</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">9</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">÷</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">4</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">5</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">6</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">x</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white mb-2">1</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">2</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">3</button>
+                                    <button class="keyboard bg-black-700 text-white mb-2">-</button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="keyboard bg-black-700 text-white">.</button>
+                                    <button class="keyboard bg-black-700 text-white">0</button>
+                                    <button class="keyboard bg-black-700 text-white">00</button>
+                                    <button class="keyboard bg-black-700 text-white">+</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <button class="keyboard bg-black-700 text-white mb-2">AC</button>
+                                <button class="keyboard bg-black-700 text-white mb-2"><span class="material-symbols-outlined">backspace</span></button>
+                                <button class="keyboardOK bg-purple-300 text-black-950">OK</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer number-modal-footer">
+                        <div class="bottom-bar bg-black-700 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--數字鍵盤Modal end-->
+        <div class="btn check btn-black-950 text-white rounded-160 w-100">確定</div>
+        <div class="bottom-bar bg-black-950 mx-auto mt-5 mb-2"></div>
+    </div>
+
+    
+    <script>
+        const interval = setInterval(() => {
+            const adjust = document.getElementById('adjust-tab');
+            const itemContent = document.querySelectorAll('.item');
+            itemContent.forEach(item => {
+                if(adjust.classList.contains('active')){
+                    item.removeAttribute('data-bs-toggle');
+                    item.addEventListener('click', function() {
+                        window.location.href = 'content.html';
+                    })
+                }
+                else{
+                    item.setAttribute('data-bs-toggle', 'modal');
+                }
+            })
+        },1000)
+    </script>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
