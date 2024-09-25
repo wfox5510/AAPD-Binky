@@ -1,3 +1,12 @@
+.payment-remind-page:has(.offcanvas-detail.showing),.payment-remind-page:has(.offcanvas-detail.show){
+  .topbar{
+    background-color: $white;
+  }
+  .bottombar{
+    background-color: $white;
+  }
+}
+
 .head-payment-remind {
   height: 44px;
   display: flex;
@@ -27,11 +36,11 @@
 
 .offcanvas.offcanvas-detail {
   width: 100%;
-  top: calc(0% + 44px);
-  height: calc(100vh - 76px);
+  top: calc(0% + 43px);
+  height: calc(100vh - 75px);
   border: 0px;
   .offcanvas-body{
-    height: calc(100vh - 76px);
+    height: calc(100vh - 75px);
   }
 }
 
