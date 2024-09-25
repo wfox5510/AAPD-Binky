@@ -13,35 +13,35 @@
     height: 5px;
   }
 
-  .modal-dialog {
+  .number-modal-dialog {
     position: absolute;
     bottom: 0;
     margin: var(--bs-modal-margin);
     height: auto;
   }
 
-  .modal {
+  .number-modal {
     --bs-modal-margin: 0;
   }
 
-  .modal-content {
+  .number-modal-content {
     border-radius: 32px 32px 0 0;
   }
 
-  .modal-header {
+  .number-modal-header {
     border-bottom: none;
     padding: 20px 16px;
   }
 
-  .modal-footer {
+  .number-modal-footer {
     border-top: none;
   }
 
-  .modal.fade .modal-dialog {
+  .number-modal.fade .number-modal-dialog {
     transform: translate(0);
   }
 
-  .modal-backdrop {
+  .number-modal-backdrop {
     background-color: transparent;
   }
 
